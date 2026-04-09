@@ -6,6 +6,7 @@ import maandelijksImg from "@/assets/maandelijks.jpg";
 import interieurImg from "@/assets/interieur.jpg";
 import exterieurImg from "@/assets/exterieur.jpg";
 import combiImg from "@/assets/combi.jpg";
+import { MapPin, Car, Sparkles } from "lucide-react";
 
 const services = [
   {
@@ -42,6 +43,16 @@ const Index = () => (
   <div className="min-h-screen bg-background">
     <Header />
     <Hero />
+
+    {/* USP strip */}
+    <section className="py-12 px-4 border-b border-border">
+      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-muted-foreground">
+        <span className="flex items-center gap-2"><Car className="w-5 h-5 text-primary" /> Wij komen bij u thuis</span>
+        <span className="flex items-center gap-2"><MapPin className="w-5 h-5 text-primary" /> Regio Amersfoort</span>
+        <span className="flex items-center gap-2"><Sparkles className="w-5 h-5 text-primary" /> Professionele producten</span>
+      </div>
+    </section>
+
     <section id="diensten" className="py-24 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-16">

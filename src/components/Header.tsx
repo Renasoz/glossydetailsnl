@@ -8,11 +8,11 @@ const Header = () => {
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "Maandelijks", href: "/maandelijks" },
     { label: "Interieur", href: "/interieur" },
     { label: "Exterieur", href: "/exterieur" },
     { label: "Combi", href: "/combi" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Maandelijks", href: "/maandelijks" },
+    { label: "Over Ons", href: "/over-ons" },
   ];
 
   return (
@@ -32,10 +32,12 @@ const Header = () => {
               {item.label}
             </Link>
           ))}
-          <Button size="sm" className="bg-primary text-primary-foreground hover:bg-gold-light gap-2">
-            <Phone className="w-4 h-4" />
-            Bel Ons
-          </Button>
+          <a href="tel:0685038115">
+            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-gold-light gap-2">
+              <Phone className="w-4 h-4" />
+              Bel Ons
+            </Button>
+          </a>
         </nav>
 
         <button className="md:hidden text-foreground" onClick={() => setMenuOpen(!menuOpen)}>
@@ -55,10 +57,12 @@ const Header = () => {
               {item.label}
             </Link>
           ))}
-          <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-gold-light gap-2">
-            <Phone className="w-4 h-4" />
-            Bel Ons
-          </Button>
+          <a href="tel:0685038115">
+            <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-gold-light gap-2">
+              <Phone className="w-4 h-4" />
+              06 - 85 03 81 15
+            </Button>
+          </a>
         </div>
       )}
     </header>
