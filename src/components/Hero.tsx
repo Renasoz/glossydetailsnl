@@ -1,6 +1,7 @@
 import heroCar from "@/assets/hero-car.jpg";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => (
   <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -26,9 +27,11 @@ const Hero = () => (
         keramische coating — wij brengen uw auto terug in showroomconditie.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <Button size="lg" className="bg-primary text-primary-foreground hover:bg-gold-light gap-2 text-base px-8">
-          Bekijk Pakketten <ArrowRight className="w-5 h-5" />
-        </Button>
+        <Link to="/combi">
+          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-gold-light gap-2 text-base px-8">
+            Bekijk Pakketten <ArrowRight className="w-5 h-5" />
+          </Button>
+        </Link>
         <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 text-base px-8">
           Gratis Offerte
         </Button>
