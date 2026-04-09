@@ -2,6 +2,9 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import PackageSection from "@/components/PackageSection";
 import Footer from "@/components/Footer";
+import maandelijksImg from "@/assets/maandelijks.jpg";
+import interieurImg from "@/assets/interieur.jpg";
+import exterieurImg from "@/assets/exterieur.jpg";
 
 const maandPakketten = [
   {
@@ -125,18 +128,21 @@ const Index = () => (
         title="Maandelijkse Pakketten"
         subtitle="Zorgeloos onderhoud"
         packages={maandPakketten}
+        image={maandelijksImg}
       />
       <PackageSection
         id="interieur"
         title="Interieur Pakketten"
         subtitle="Van binnen als nieuw"
         packages={interieurPakketten}
+        image={interieurImg}
       />
       <PackageSection
         id="exterieur"
         title="Exterieur Pakketten"
         subtitle="Stralend van buiten"
         packages={exterieurPakketten}
+        image={exterieurImg}
       />
     </div>
     <Footer />
