@@ -5,11 +5,12 @@ import Footer from "@/components/Footer";
 import maandelijksImg from "@/assets/maandelijks.jpg";
 import interieurImg from "@/assets/interieur.jpg";
 import exterieurImg from "@/assets/exterieur.jpg";
+import combiImg from "@/assets/combi.jpg";
 
 const maandPakketten = [
   {
     name: "Basis",
-    price: "€79",
+    price: "vanaf €79",
     period: "maand",
     features: [
       "Uitwendige handwas",
@@ -21,7 +22,7 @@ const maandPakketten = [
   },
   {
     name: "Premium",
-    price: "€149",
+    price: "vanaf €149",
     period: "maand",
     popular: true,
     features: [
@@ -34,7 +35,7 @@ const maandPakketten = [
   },
   {
     name: "VIP",
-    price: "€249",
+    price: "vanaf €249",
     period: "maand",
     features: [
       "Alles uit Premium",
@@ -49,7 +50,7 @@ const maandPakketten = [
 const interieurPakketten = [
   {
     name: "Interieur Basis",
-    price: "€89",
+    price: "vanaf €89",
     features: [
       "Volledig stofzuigen",
       "Dashboard & panelen reinigen",
@@ -59,7 +60,7 @@ const interieurPakketten = [
   },
   {
     name: "Interieur Diep",
-    price: "€179",
+    price: "vanaf €179",
     popular: true,
     features: [
       "Alles uit Basis",
@@ -71,7 +72,7 @@ const interieurPakketten = [
   },
   {
     name: "Interieur Totaal",
-    price: "€279",
+    price: "vanaf €279",
     features: [
       "Alles uit Diep",
       "Leervoeding & bescherming",
@@ -85,7 +86,7 @@ const interieurPakketten = [
 const exterieurPakketten = [
   {
     name: "Exterieur Basis",
-    price: "€69",
+    price: "vanaf €69",
     features: [
       "Handwas met snow foam",
       "Velgen & banden",
@@ -95,7 +96,7 @@ const exterieurPakketten = [
   },
   {
     name: "Exterieur Glans",
-    price: "€199",
+    price: "vanaf €199",
     popular: true,
     features: [
       "Alles uit Basis",
@@ -107,13 +108,50 @@ const exterieurPakketten = [
   },
   {
     name: "Exterieur Showroom",
-    price: "€399",
+    price: "vanaf €399",
     features: [
       "Alles uit Glans",
       "Machine polijsten (2-stap)",
       "Keramische coating",
       "Ruitcoating",
       "Tot 5 jaar bescherming",
+    ],
+  },
+];
+
+const combiPakketten = [
+  {
+    name: "Combi Basis",
+    price: "vanaf €139",
+    features: [
+      "Uitwendige handwas & snow foam",
+      "Interieur stofzuigen",
+      "Ramen binnen & buiten",
+      "Velgen & bandenglans",
+      "Dashboard afwerking",
+    ],
+  },
+  {
+    name: "Combi Premium",
+    price: "vanaf €329",
+    popular: true,
+    features: [
+      "Alles uit Combi Basis",
+      "Stoelen dieptereiniging",
+      "Machine polijsten (1-stap)",
+      "Wax beschermlaag",
+      "Luchtverfrisser",
+    ],
+  },
+  {
+    name: "Combi Totaal",
+    price: "vanaf €599",
+    features: [
+      "Alles uit Combi Premium",
+      "Leervoeding & bescherming",
+      "Keramische coating",
+      "Stoomreiniging interieur",
+      "Ruitcoating & chroomwerk",
     ],
   },
 ];
@@ -143,6 +181,13 @@ const Index = () => (
         subtitle="Stralend van buiten"
         packages={exterieurPakketten}
         image={exterieurImg}
+      />
+      <PackageSection
+        id="combi"
+        title="Combi Pakketten"
+        subtitle="Binnen & buiten compleet"
+        packages={combiPakketten}
+        image={combiImg}
       />
     </div>
     <Footer />
