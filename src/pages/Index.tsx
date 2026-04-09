@@ -1,16 +1,146 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import PackageSection from "@/components/PackageSection";
+import Footer from "@/components/Footer";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
-  return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+const maandPakketten = [
+  {
+    name: "Basis",
+    price: "€79",
+    period: "maand",
+    features: [
+      "Uitwendige handwas",
+      "Velgenreiniging",
+      "Bandenglans",
+      "Ramen wassen",
+      "1x per maand",
+    ],
+  },
+  {
+    name: "Premium",
+    price: "€149",
+    period: "maand",
+    popular: true,
+    features: [
+      "Alles uit Basis",
+      "Interieur stofzuigen",
+      "Dashboard reiniging",
+      "Luchtverfrisser",
+      "2x per maand",
+    ],
+  },
+  {
+    name: "VIP",
+    price: "€249",
+    period: "maand",
+    features: [
+      "Alles uit Premium",
+      "Leerbehandeling",
+      "Motor reiniging",
+      "Keramische spray coating",
+      "Elke week",
+    ],
+  },
+];
+
+const interieurPakketten = [
+  {
+    name: "Interieur Basis",
+    price: "€89",
+    features: [
+      "Volledig stofzuigen",
+      "Dashboard & panelen reinigen",
+      "Ramen binnenzijde",
+      "Vloermatten wassen",
+    ],
+  },
+  {
+    name: "Interieur Diep",
+    price: "€179",
+    popular: true,
+    features: [
+      "Alles uit Basis",
+      "Stoelen dieptereiniging",
+      "Vlekverwijdering",
+      "Stoomreiniging",
+      "Luchtzuivering",
+    ],
+  },
+  {
+    name: "Interieur Totaal",
+    price: "€279",
+    features: [
+      "Alles uit Diep",
+      "Leervoeding & bescherming",
+      "Hemelbekleding reinigen",
+      "Antibacteriële behandeling",
+      "Geurverwijdering",
+    ],
+  },
+];
+
+const exterieurPakketten = [
+  {
+    name: "Exterieur Basis",
+    price: "€69",
+    features: [
+      "Handwas met snow foam",
+      "Velgen & banden",
+      "Ramen & spiegels",
+      "Drogen & afwerking",
+    ],
+  },
+  {
+    name: "Exterieur Glans",
+    price: "€199",
+    popular: true,
+    features: [
+      "Alles uit Basis",
+      "Klei-behandeling",
+      "Machine polijsten (1-stap)",
+      "Wax beschermlaag",
+      "Chroomwerk polijsten",
+    ],
+  },
+  {
+    name: "Exterieur Showroom",
+    price: "€399",
+    features: [
+      "Alles uit Glans",
+      "Machine polijsten (2-stap)",
+      "Keramische coating",
+      "Ruitcoating",
+      "Tot 5 jaar bescherming",
+    ],
+  },
+];
+
+const Index = () => (
+  <div className="min-h-screen bg-background">
+    <Header />
+    <Hero />
+    <div id="pakketten">
+      <PackageSection
+        id="maandelijks"
+        title="Maandelijkse Pakketten"
+        subtitle="Zorgeloos onderhoud"
+        packages={maandPakketten}
+      />
+      <PackageSection
+        id="interieur"
+        title="Interieur Pakketten"
+        subtitle="Van binnen als nieuw"
+        packages={interieurPakketten}
+      />
+      <PackageSection
+        id="exterieur"
+        title="Exterieur Pakketten"
+        subtitle="Stralend van buiten"
+        packages={exterieurPakketten}
+      />
     </div>
-  );
-};
-
-const Index = PlaceholderIndex;
+    <Footer />
+  </div>
+);
 
 export default Index;
