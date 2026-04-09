@@ -1,13 +1,13 @@
 import heroCar from "@/assets/hero-car.jpg";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero = () => (
   <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
     <img
       src={heroCar}
-      alt="Professionele auto detailing"
+      alt="Mobiele auto detailing bij u thuis"
       className="absolute inset-0 w-full h-full object-cover"
       width={1920}
       height={1080}
@@ -16,15 +16,15 @@ const Hero = () => (
 
     <div className="relative z-10 container mx-auto text-center px-4 pt-20">
       <p className="text-primary font-medium tracking-[0.3em] uppercase text-sm mb-4 animate-fade-in">
-        Amersfoort &bull; Professioneel &bull; Premium
+        <MapPin className="w-4 h-4 inline mr-1" /> Wij Komen Bij U Thuis &bull; Regio Amersfoort
       </p>
       <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-6">
-        Uw Auto Verdient{" "}
-        <span className="text-gradient-gold">Het Beste</span>
+        Mobiele Detailing{" "}
+        <span className="text-gradient-gold">Bij U Op Locatie</span>
       </h1>
       <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10">
-        Professionele auto detailing in Amersfoort. Van interieurreiniging tot
-        keramische coating — wij brengen uw auto terug in showroomconditie.
+        Glossy Details komt naar u toe — thuis, op kantoor of waar u maar wilt.
+        Professionele auto detailing zonder dat u de deur uit hoeft.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link to="/combi">
@@ -32,9 +32,11 @@ const Hero = () => (
             Bekijk Pakketten <ArrowRight className="w-5 h-5" />
           </Button>
         </Link>
-        <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 text-base px-8">
-          Gratis Offerte
-        </Button>
+        <Link to="/over-ons">
+          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 text-base px-8">
+            Over Ons
+          </Button>
+        </Link>
       </div>
     </div>
   </section>

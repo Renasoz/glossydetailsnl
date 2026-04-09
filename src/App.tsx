@@ -8,6 +8,7 @@ import MaandelijksPakketten from "./pages/MaandelijksPakketten";
 import InterieurPakketten from "./pages/InterieurPakketten";
 import ExterieurPakketten from "./pages/ExterieurPakketten";
 import CombiPakketten from "./pages/CombiPakketten";
+import OverOns from "./pages/OverOns";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/interieur" element={<InterieurPakketten />} />
           <Route path="/exterieur" element={<ExterieurPakketten />} />
           <Route path="/combi" element={<CombiPakketten />} />
+          <Route path="/over-ons" element={<OverOns />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
