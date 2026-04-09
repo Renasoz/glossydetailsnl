@@ -4,7 +4,7 @@ const Footer = () => (
   <footer id="contact" className="border-t border-border bg-card py-16 px-4">
     <div className="container mx-auto grid md:grid-cols-3 gap-12">
       <div>
-        <h3 className="text-xl font-serif font-bold text-gradient-gold mb-4">Detail Pro Amersfoort</h3>
+        <h3 className="text-xl font-serif font-bold text-gradient-gold mb-4">Glossy Details</h3>
         <p className="text-muted-foreground text-sm leading-relaxed">
           Professionele auto detailing in het hart van Amersfoort. Kwaliteit en passie voor uw auto.
         </p>
@@ -14,7 +14,7 @@ const Footer = () => (
         <div className="space-y-3 text-sm text-muted-foreground">
           <p className="flex items-center gap-3"><MapPin className="w-4 h-4 text-primary" /> Amersfoort, Nederland</p>
           <p className="flex items-center gap-3"><Phone className="w-4 h-4 text-primary" /> 033 - 123 4567</p>
-          <p className="flex items-center gap-3"><Mail className="w-4 h-4 text-primary" /> info@detailpro-amersfoort.nl</p>
+          <p className="flex items-center gap-3"><Mail className="w-4 h-4 text-primary" /> info@glossydetails.nl</p>
         </div>
       </div>
       <div className="space-y-4">
@@ -27,7 +27,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="container mx-auto mt-12 pt-8 border-t border-border text-center text-xs text-muted-foreground">
-      © 2026 Detail Pro Amersfoort. Alle rechten voorbehouden.
+      © 2026 Glossy Details. Alle rechten voorbehouden.
     </div>
   </footer>
 );
