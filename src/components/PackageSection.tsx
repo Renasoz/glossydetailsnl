@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 interface Package {
   name: string;
@@ -16,6 +17,13 @@ interface PackageSectionProps {
   packages: Package[];
   image?: string;
 }
+
+const categories = [
+  { label: "Exterieur", href: "/exterieur" },
+  { label: "Interieur", href: "/interieur" },
+  { label: "Combi", href: "/combi" },
+  { label: "Maandelijks", href: "/maandelijks" },
+];
 
 const PackageCard = ({ pkg }: { pkg: Package }) => (
   <div
@@ -46,7 +54,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => (
     <Button
       className={`w-full ${
         pkg.popular
-          ? "bg-primary text-primary-foreground hover:bg-gold-light"
+          ? "bg-primary text-primary-foreground hover:bg-primary/90"
           : "bg-secondary text-secondary-foreground hover:bg-muted"
       }`}
     >
@@ -55,12 +63,39 @@ const PackageCard = ({ pkg }: { pkg: Package }) => (
   </div>
 );
 
-const PackageSection = ({ id, title, subtitle, packages, image }: PackageSectionProps) => (
-  <section id={id} className="py-24 px-4">
-    <div className="container mx-auto">
-      <div className="text-center mb-16">
+const PackageSection = ({ id, title, subtitle, packages, image }: PackageSectionProps) => {
+  const location = useLocation();
+
+  return (
+    <section id={id} className="py-24 px-4">
+      <div className="container mx-auto">
+        <div className="text-center mb-10">
+          <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-3">{subtitle}</p>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold">{title}</h2>
+        </div>
+
+        {/* Category tabs */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {categories.map((cat) => {
+            const isActive = location.pathname === cat.href;
+            return (
+              <Link key={cat.href} to={cat.href}>
+                <Button
+                  variant={isActive ? "default" : "secondary"}
+                  className={isActive
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                    : "bg-secondary text-secondary-foreground hover:bg-muted"
+                  }
+                >
+                  {cat.label}
+                </Button>
+              </Link>
+            );
+          })}
+        </div>
+
         {image && (
-          <div className="mb-8 max-w-3xl mx-auto rounded-2xl overflow-hidden">
+          <div className="mb-12 max-w-3xl mx-auto rounded-2xl overflow-hidden">
             <img
               src={image}
               alt={title}
@@ -71,16 +106,15 @@ const PackageSection = ({ id, title, subtitle, packages, image }: PackageSection
             />
           </div>
         )}
-        <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-3">{subtitle}</p>
-        <h2 className="text-3xl md:text-4xl font-serif font-bold">{title}</h2>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {packages.map((pkg) => (
+            <PackageCard key={pkg.name} pkg={pkg} />
+          ))}
+        </div>
       </div>
-      <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        {packages.map((pkg) => (
-          <PackageCard key={pkg.name} pkg={pkg} />
-        ))}
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default PackageSection;
