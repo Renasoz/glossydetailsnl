@@ -2,11 +2,12 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 import maandelijksImg from "@/assets/maandelijks.jpg";
 import interieurImg from "@/assets/interieur.jpg";
 import exterieurImg from "@/assets/exterieur.jpg";
 import combiImg from "@/assets/combi.jpg";
-import { MapPin, Car, Sparkles } from "lucide-react";
+import { MapPin, Car, Sparkles, Phone } from "lucide-react";
 
 const services = [
   {
