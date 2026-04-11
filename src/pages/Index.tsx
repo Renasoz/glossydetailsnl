@@ -100,7 +100,24 @@ const Index = () => (
       </div>
     </section>
 
-    {/* CTA */}
+    {/* Waarom Glossy Details */}
+    <section className="py-20 px-4 border-t border-border">
+      <div className="container mx-auto max-w-3xl text-center">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
+          Waarom Glossy Details?
+        </h2>
+        <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+          Glossy Details is een mobiel autopoetsbedrijf in de regio Amersfoort. Wij komen naar ú toe — 
+          op uw oprit, parkeerplaats of kantoor. Geen gedoe met wegbrengen, geen wachttijden. 
+          U gaat gewoon door met uw dag terwijl wij uw auto laten stralen.
+        </p>
+        <p className="text-muted-foreground text-lg leading-relaxed">
+          Met professionele producten en oog voor detail zorgen wij voor een resultaat dat u ziet én voelt. 
+          Van een snelle wasbeurt tot een complete detailing met keramische coating — wij regelen het.
+        </p>
+      </div>
+    </section>
+
     <section className="py-20 px-4 border-t border-border">
       <div className="container mx-auto max-w-2xl text-center">
         <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Klaar Voor Een Glanzende Auto?</h2>
