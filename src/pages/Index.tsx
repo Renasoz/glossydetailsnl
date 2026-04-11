@@ -53,11 +53,60 @@ const Index = () => (
       </div>
     </section>
 
-    <section id="diensten" className="py-24 px-4">
+    {/* Introductie */}
+    <section className="py-20 px-4">
+      <div className="container mx-auto max-w-3xl text-center">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
+          Waarom Glossy Details?
+        </h2>
+        <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+          Glossy Details is een mobiel autopoetsbedrijf in de regio Amersfoort. Wij komen naar ú toe — 
+          op uw oprit, parkeerplaats of kantoor. Geen gedoe met wegbrengen, geen wachttijden. 
+          U gaat gewoon door met uw dag terwijl wij uw auto laten stralen.
+        </p>
+        <p className="text-muted-foreground text-lg leading-relaxed">
+          Met professionele producten en oog voor detail zorgen wij voor een resultaat dat u ziet én voelt. 
+          Van een snelle wasbeurt tot een complete detailing met keramische coating — wij regelen het.
+        </p>
+      </div>
+    </section>
+
+    {/* Hoe werkt het */}
+    <section className="py-20 px-4 border-t border-border">
+      <div className="container mx-auto max-w-4xl">
+        <div className="text-center mb-14">
+          <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-3">Hoe Werkt Het</p>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold">In 3 Simpele Stappen</h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8 text-center">
+          <div className="space-y-3">
+            <div className="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto text-xl font-bold font-serif">1</div>
+            <h3 className="text-lg font-semibold text-foreground">Neem Contact Op</h3>
+            <p className="text-muted-foreground text-sm">Bel of app ons en vertel wat uw auto nodig heeft. Wij adviseren u graag.</p>
+          </div>
+          <div className="space-y-3">
+            <div className="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto text-xl font-bold font-serif">2</div>
+            <h3 className="text-lg font-semibold text-foreground">Wij Komen Langs</h3>
+            <p className="text-muted-foreground text-sm">Op de afgesproken dag en tijd staan wij bij u op de oprit — met alles erop en eraan.</p>
+          </div>
+          <div className="space-y-3">
+            <div className="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto text-xl font-bold font-serif">3</div>
+            <h3 className="text-lg font-semibold text-foreground">Genieten Maar</h3>
+            <p className="text-muted-foreground text-sm">Uw auto glimt als nooit tevoren. Wij ruimen alles netjes op en u rijdt weer met plezier.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Diensten */}
+    <section id="diensten" className="py-24 px-4 border-t border-border">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-3">Onze Diensten</p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold">Wat Kunnen Wij Voor U Doen?</h2>
+          <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
+            Kies het pakket dat bij u past. Van een snelle opfrisbeurt tot een volledige detailing — wij hebben het.
+          </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {services.map((service) => (
@@ -66,6 +115,23 @@ const Index = () => (
         </div>
       </div>
     </section>
+
+    {/* CTA */}
+    <section className="py-20 px-4 border-t border-border">
+      <div className="container mx-auto max-w-2xl text-center">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Klaar Voor Een Glanzende Auto?</h2>
+        <p className="text-muted-foreground text-lg mb-8">
+          Neem vandaag nog contact op voor een vrijblijvende offerte. Wij komen bij u langs in de regio Amersfoort.
+        </p>
+        <a href="tel:0685038115">
+          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 text-base px-8">
+            <Phone className="w-5 h-5" />
+            Bel Ons: 06 - 85 03 81 15
+          </Button>
+        </a>
+      </div>
+    </section>
+
     <Footer />
   </div>
 );
