@@ -73,13 +73,13 @@ const PackageSection = ({ id, title, subtitle, packages, image, extras }: Packag
   const location = useLocation();
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPkg, setSelectedPkg] = useState("");
-
-  const handleSelect = (pkgName: string) => {
+  const [selectedPrice, setSelectedPrice] = useState("");
+  const handleSelect = (pkgName: string, pkgPrice: string) => {
     if (extras && extras.length > 0) {
       setSelectedPkg(pkgName);
+      setSelectedPrice(pkgPrice);
       setModalOpen(true);
     } else {
-      // No extras — go straight to phone
       window.location.href = "tel:0685038115";
     }
   };
