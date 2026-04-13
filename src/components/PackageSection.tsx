@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { Check, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import ExtrasModal from "@/components/ExtrasModal";
+import type { ExtraOption } from "@/data/packages";
 
 interface Package {
   name: string;
@@ -16,6 +19,7 @@ interface PackageSectionProps {
   subtitle: string;
   packages: Package[];
   image?: string;
+  extras?: ExtraOption[];
 }
 
 const categories = [
@@ -25,7 +29,7 @@ const categories = [
   { label: "Maandelijks", href: "/maandelijks" },
 ];
 
-const PackageCard = ({ pkg }: { pkg: Package }) => (
+const PackageCard = ({ pkg, onSelect }: { pkg: Package; onSelect: (name: string) => void }) => (
   <div
     className={`relative rounded-2xl p-8 border transition-all hover:-translate-y-1 hover:shadow-2xl ${
       pkg.popular
@@ -51,23 +55,34 @@ const PackageCard = ({ pkg }: { pkg: Package }) => (
         </li>
       ))}
     </ul>
-    <a href="tel:0685038115">
-      <Button
-        className={`w-full ${
-          pkg.popular
-            ? "bg-primary text-primary-foreground hover:bg-primary/90"
-            : "bg-secondary text-secondary-foreground hover:bg-muted"
-        }`}
-      >
-        <Phone className="w-4 h-4 mr-2" />
-        Vraag Offerte Aan
-      </Button>
-    </a>
+    <Button
+      onClick={() => onSelect(pkg.name)}
+      className={`w-full ${
+        pkg.popular
+          ? "bg-primary text-primary-foreground hover:bg-primary/90"
+          : "bg-secondary text-secondary-foreground hover:bg-muted"
+      }`}
+    >
+      <Phone className="w-4 h-4 mr-2" />
+      Vraag Offerte Aan
+    </Button>
   </div>
 );
 
-const PackageSection = ({ id, title, subtitle, packages, image }: PackageSectionProps) => {
+const PackageSection = ({ id, title, subtitle, packages, image, extras }: PackageSectionProps) => {
   const location = useLocation();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedPkg, setSelectedPkg] = useState("");
+
+  const handleSelect = (pkgName: string) => {
+    if (extras && extras.length > 0) {
+      setSelectedPkg(pkgName);
+      setModalOpen(true);
+    } else {
+      // No extras — go straight to phone
+      window.location.href = "tel:0685038115";
+    }
+  };
 
   return (
     <section id={id} className="py-24 px-4">
@@ -112,7 +127,7 @@ const PackageSection = ({ id, title, subtitle, packages, image }: PackageSection
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {packages.map((pkg) => (
-            <PackageCard key={pkg.name} pkg={pkg} />
+            <PackageCard key={pkg.name} pkg={pkg} onSelect={handleSelect} />
           ))}
         </div>
 
@@ -139,6 +154,15 @@ const PackageSection = ({ id, title, subtitle, packages, image }: PackageSection
           </div>
         </div>
       </div>
+
+      {extras && extras.length > 0 && (
+        <ExtrasModal
+          open={modalOpen}
+          onOpenChange={setModalOpen}
+          packageName={selectedPkg}
+          extras={extras}
+        />
+      )}
     </section>
   );
 };

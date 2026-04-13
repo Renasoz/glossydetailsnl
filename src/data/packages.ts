@@ -154,3 +154,50 @@ export const combiPakketten: Package[] = [
     ],
   },
 ];
+
+export interface ExtraOption {
+  name: string;
+  description: string;
+  price: string;
+}
+
+export const exterieurExtras: ExtraOption[] = [
+  {
+    name: "Motorruimte Reinigen",
+    description: "Het hart van de auto, die qua schoonmaak de minste aandacht krijgt. Neem je motorruimte mee in de schoonmaak.",
+    price: "€40",
+  },
+  {
+    name: "Banden Dressing",
+    description: "Jou banden beschermen tegen uitdroging en UV-straling? En het ziet er ook nog eens netjes uit, de echte afmaker voor elk detail!",
+    price: "€20",
+  },
+  {
+    name: "Kleibehandeling",
+    description: "Voelt jou lak zelfs na het schoonmaken grof aan? Een kleibehandeling zorgt voor het verwijderen van zelfs de kleinste vervuilingen.",
+    price: "€50",
+  },
+];
+
+export const interieurExtras: ExtraOption[] = [
+  {
+    name: "Vlekverwijdering Grondig",
+    description: "Zijn er vlekken in de bekleding die meer aandacht vereisen dan een basis behandeling? Met deze optie krijgen jou stoelen extra grondige reiniging.",
+    price: "€40",
+  },
+  {
+    name: "Dieptereiniging Vloer",
+    description: "Zijn jou matten bruin in plaats van zwart? Dan word het eens tijd deze grondig te laten reinigen.",
+    price: "€30",
+  },
+  {
+    name: "Kunststof Voeding",
+    description: "Wil je dat jou kunststofdelen van het interieur er weer helemaal strak en netjes bijstaan? Laat deze dan voeden voor het perfecte resultaat.",
+    price: "€30",
+  },
+];
+
+export const combiExtras: ExtraOption[] = [
+  ...exterieurExtras,
+  ...interieurExtras,
+];

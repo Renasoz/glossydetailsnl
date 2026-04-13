@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import PackageSection from "@/components/PackageSection";
 import Footer from "@/components/Footer";
-import { exterieurPakketten } from "@/data/packages";
+import { exterieurPakketten, exterieurExtras } from "@/data/packages";
 import exterieurImg from "@/assets/exterieur.jpg";
 
 const ExterieurPakketten = () => (
@@ -14,6 +14,7 @@ const ExterieurPakketten = () => (
         subtitle="Stralend van buiten"
         packages={exterieurPakketten}
         image={exterieurImg}
+        extras={exterieurExtras}
       />
     </div>
     <Footer />
