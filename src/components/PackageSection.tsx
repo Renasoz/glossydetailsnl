@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 
@@ -51,15 +51,18 @@ const PackageCard = ({ pkg }: { pkg: Package }) => (
         </li>
       ))}
     </ul>
-    <Button
-      className={`w-full ${
-        pkg.popular
-          ? "bg-primary text-primary-foreground hover:bg-primary/90"
-          : "bg-secondary text-secondary-foreground hover:bg-muted"
-      }`}
-    >
-      Kies Dit Pakket
-    </Button>
+    <a href="tel:0685038115">
+      <Button
+        className={`w-full ${
+          pkg.popular
+            ? "bg-primary text-primary-foreground hover:bg-primary/90"
+            : "bg-secondary text-secondary-foreground hover:bg-muted"
+        }`}
+      >
+        <Phone className="w-4 h-4 mr-2" />
+        Vraag Offerte Aan
+      </Button>
+    </a>
   </div>
 );
 
@@ -111,6 +114,29 @@ const PackageSection = ({ id, title, subtitle, packages, image }: PackageSection
           {packages.map((pkg) => (
             <PackageCard key={pkg.name} pkg={pkg} />
           ))}
+        </div>
+
+        {/* Offerte CTA */}
+        <div className="mt-16 max-w-2xl mx-auto text-center rounded-2xl border border-primary/20 bg-primary/5 p-8">
+          <h3 className="text-xl font-serif font-bold mb-3">Offerte Op Maat Nodig?</h3>
+          <p className="text-muted-foreground mb-6">
+            Elke auto is anders. Neem contact met ons op voor een vrijblijvende offerte op maat. 
+            Wij adviseren u graag over het beste pakket voor uw situatie.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="tel:0685038115">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 w-full sm:w-auto">
+                <Phone className="w-4 h-4" />
+                Bel: 06 - 85 03 81 15
+              </Button>
+            </a>
+            <a href="https://wa.me/31685038115" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 gap-2 w-full sm:w-auto">
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
