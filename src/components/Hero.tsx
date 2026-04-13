@@ -16,7 +16,7 @@ const Hero = () => (
 
     <div className="relative z-10 container mx-auto text-center px-4 pt-20">
       <p className="text-primary font-medium tracking-[0.3em] uppercase text-sm mb-4 animate-fade-in">
-        <MapPin className="w-4 h-4 inline mr-1" /> Wij Komen Bij U Thuis &bull; Regio Amersfoort
+        <MapPin className="w-4 h-4 inline mr-1" /> Wij Komen Bij U Thuis
       </p>
       <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-6">
         Mobiele Detailing{" "}

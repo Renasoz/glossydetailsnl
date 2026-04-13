@@ -12,14 +12,14 @@ const OverOns = () => (
           <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-3">Over Ons</p>
           <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6">Glossy Details</h1>
           <p className="text-muted-foreground text-lg">
-            Mobiel autopoetsbedrijf in de regio Amersfoort
+            Mobiel autopoetsbedrijf — wij komen naar u toe
           </p>
         </div>
 
         <div className="space-y-8 text-secondary-foreground leading-relaxed">
           <p>
             Bij <strong className="text-foreground">Glossy Details</strong> draait alles om gemak en kwaliteit.
-            Als mobiel autopoetsbedrijf komen wij naar ú toe — thuis, op kantoor of waar u maar wilt in de regio Amersfoort.
+            Als mobiel autopoetsbedrijf komen wij naar ú toe — thuis, op kantoor of waar u maar wilt.
             U hoeft nergens heen te rijden en kunt gewoon doorgaan met uw dag terwijl wij uw auto in topconditie brengen.
           </p>
           <p>
@@ -54,8 +54,8 @@ const OverOns = () => (
           <div className="rounded-2xl border border-border bg-card p-6 flex gap-4">
             <Shield className="w-8 h-8 text-primary shrink-0 mt-1" />
             <div>
-              <h3 className="font-semibold text-foreground mb-1">Regio Amersfoort</h3>
-              <p className="text-sm text-muted-foreground">Actief in Amersfoort en omliggende gemeenten.</p>
+              <h3 className="font-semibold text-foreground mb-1">Door Heel Nederland</h3>
+              <p className="text-sm text-muted-foreground">Wij komen naar u toe, waar u ook bent.</p>
             </div>
           </div>
         </div>

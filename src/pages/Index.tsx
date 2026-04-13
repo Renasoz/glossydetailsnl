@@ -49,7 +49,7 @@ const Index = () => (
     <section className="py-12 px-4 border-b border-border">
       <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-muted-foreground">
         <span className="flex items-center gap-2"><Car className="w-5 h-5 text-primary" /> Wij komen bij u thuis</span>
-        <span className="flex items-center gap-2"><MapPin className="w-5 h-5 text-primary" /> Regio Amersfoort</span>
+        <span className="flex items-center gap-2"><MapPin className="w-5 h-5 text-primary" /> Mobiel door heel Nederland</span>
         <span className="flex items-center gap-2"><Sparkles className="w-5 h-5 text-primary" /> Professionele producten</span>
       </div>
     </section>
@@ -107,7 +107,7 @@ const Index = () => (
           Waarom Glossy Details?
         </h2>
         <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-          Glossy Details is een mobiel autopoetsbedrijf in de regio Amersfoort. Wij komen naar ú toe — 
+          Glossy Details is een mobiel autopoetsbedrijf. Wij komen naar ú toe — 
           op uw oprit, parkeerplaats of kantoor. Geen gedoe met wegbrengen, geen wachttijden. 
           U gaat gewoon door met uw dag terwijl wij uw auto laten stralen.
         </p>

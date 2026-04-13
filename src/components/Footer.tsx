@@ -7,13 +7,13 @@ const Footer = () => (
       <div>
         <h3 className="text-xl font-serif font-bold text-gradient-gold mb-4">Glossy Details</h3>
         <p className="text-muted-foreground text-sm leading-relaxed">
-          Mobiel autopoetsbedrijf in de regio Amersfoort. Wij komen bij u thuis, op kantoor of waar u maar wilt.
+          Mobiel autopoetsbedrijf. Wij komen bij u thuis, op kantoor of waar u maar wilt.
         </p>
       </div>
       <div className="space-y-4">
         <h4 className="font-semibold text-foreground">Contact</h4>
         <div className="space-y-3 text-sm text-muted-foreground">
-          <p className="flex items-center gap-3"><MapPin className="w-4 h-4 text-primary" /> Regio Amersfoort, Nederland</p>
+          <p className="flex items-center gap-3"><MapPin className="w-4 h-4 text-primary" /> Nederland</p>
           <a href="tel:0685038115" className="flex items-center gap-3 hover:text-primary transition-colors">
             <Phone className="w-4 h-4 text-primary" /> 06 - 85 03 81 15
           </a>
