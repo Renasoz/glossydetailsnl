@@ -75,13 +75,9 @@ const PackageSection = ({ id, title, subtitle, packages, image, extras }: Packag
   const [selectedPkg, setSelectedPkg] = useState("");
   const [selectedPrice, setSelectedPrice] = useState("");
   const handleSelect = (pkgName: string, pkgPrice: string) => {
-    if (extras && extras.length > 0) {
-      setSelectedPkg(pkgName);
-      setSelectedPrice(pkgPrice);
-      setModalOpen(true);
-    } else {
-      window.location.href = "tel:0685038115";
-    }
+    setSelectedPkg(pkgName);
+    setSelectedPrice(pkgPrice);
+    setModalOpen(true);
   };
 
   return (
@@ -155,15 +151,13 @@ const PackageSection = ({ id, title, subtitle, packages, image, extras }: Packag
         </div>
       </div>
 
-      {extras && extras.length > 0 && (
-        <ExtrasModal
-          open={modalOpen}
-          onOpenChange={setModalOpen}
-          packageName={selectedPkg}
-          packagePrice={selectedPrice}
-          extras={extras}
-        />
-      )}
+      <ExtrasModal
+        open={modalOpen}
+        onOpenChange={setModalOpen}
+        packageName={selectedPkg}
+        packagePrice={selectedPrice}
+        extras={extras ?? []}
+      />
     </section>
   );
 };
