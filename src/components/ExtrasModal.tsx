@@ -2,8 +2,6 @@ import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
 import { Phone, MessageCircle, Car } from "lucide-react";
 import type { ExtraOption } from "@/data/packages";
 
@@ -11,6 +9,7 @@ interface ExtrasModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   packageName: string;
+  packagePrice: string;
   extras: ExtraOption[];
 }
 
@@ -20,10 +19,17 @@ const carSizes = [
   { value: "groot", label: "Grote auto", extra: 30, description: "bijv. SUV, bus, Touareg" },
 ] as const;
 
-const ExtrasModal = ({ open, onOpenChange, packageName, extras }: ExtrasModalProps) => {
+const parseBasePrice = (priceStr: string): number | null => {
+  const match = priceStr.match(/€(\d+)/);
+  return match ? parseInt(match[1], 10) : null;
+};
+
+const ExtrasModal = ({ open, onOpenChange, packageName, packagePrice, extras }: ExtrasModalProps) => {
   const [selected, setSelected] = useState<string[]>([]);
   const [carSize, setCarSize] = useState<string>("");
   const [showError, setShowError] = useState(false);
+
+  const basePrice = parseBasePrice(packagePrice);
 
   const toggle = (name: string) =>
     setSelected((prev) =>
@@ -59,80 +65,75 @@ const ExtrasModal = ({ open, onOpenChange, packageName, extras }: ExtrasModalPro
       <DialogContent className="max-w-lg max-h-[85vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="font-serif text-xl">
-            {packageName} — Offerte Aanvragen
+            Welk type voertuig heeft u?
           </DialogTitle>
-          <p className="text-sm text-muted-foreground mt-1">
-            Kies uw autogrootte en eventuele extra opties.
-          </p>
         </DialogHeader>
 
         {/* Car size selection - mandatory */}
-        <div className="mt-4">
-          <div className="flex items-center gap-2 mb-3">
-            <Car className="w-4 h-4 text-primary" />
-            <h3 className="font-semibold text-foreground text-sm">Autogrootte <span className="text-destructive">*</span></h3>
-          </div>
-          <RadioGroup value={carSize} onValueChange={(v) => { setCarSize(v); setShowError(false); }} className="space-y-2">
-            {carSizes.map((size) => (
-              <label
+        <div className="mt-2 space-y-2">
+          {carSizes.map((size) => {
+            const total = basePrice !== null ? basePrice + size.extra : null;
+            const isActive = carSize === size.value;
+            return (
+              <button
                 key={size.value}
-                className={`flex items-center gap-4 p-4 rounded-xl border cursor-pointer transition-all ${
-                  carSize === size.value
+                type="button"
+                onClick={() => { setCarSize(size.value); setShowError(false); }}
+                className={`w-full flex items-center justify-between p-4 rounded-xl border text-left transition-all ${
+                  isActive
                     ? "border-primary bg-primary/5"
                     : "border-border bg-card hover:border-muted-foreground/30"
                 }`}
               >
-                <RadioGroupItem value={size.value} />
-                <div className="flex-1 min-w-0">
-                  <span className="font-semibold text-foreground">{size.label}</span>
-                  <p className="text-xs text-muted-foreground">{size.description}</p>
-                </div>
-                {size.extra > 0 && (
-                  <span className="text-primary font-bold text-sm shrink-0">+€{size.extra}</span>
+                <span className="font-medium text-foreground">{size.label}</span>
+                {total !== null && (
+                  <span className="text-primary font-bold text-lg">€{total}</span>
                 )}
-              </label>
-            ))}
-          </RadioGroup>
+              </button>
+            );
+          })}
           {showError && (
-            <p className="text-destructive text-sm mt-2">Selecteer eerst een autogrootte.</p>
+            <p className="text-destructive text-sm mt-1">Selecteer eerst een autogrootte.</p>
           )}
         </div>
 
         {/* Extra options */}
-        <div className="mt-6">
-          <h3 className="font-semibold text-foreground text-sm mb-3">Extra opties (optioneel)</h3>
-          <div className="space-y-3">
-            {extras.map((extra) => {
-              const isSelected = selected.includes(extra.name);
-              return (
-                <button
-                  key={extra.name}
-                  type="button"
-                  onClick={() => toggle(extra.name)}
-                  className={`w-full flex items-start gap-4 p-4 rounded-xl border text-left transition-all ${
-                    isSelected
-                      ? "border-primary bg-primary/5"
-                      : "border-border bg-card hover:border-muted-foreground/30"
-                  }`}
-                >
-                  <Checkbox
-                    checked={isSelected}
-                    className="mt-1 shrink-0 pointer-events-none"
-                  />
-                  <div className="flex-1 min-w-0">
-                    <h4 className="font-semibold text-foreground">{extra.name}</h4>
-                    <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-                      {extra.description}
-                    </p>
-                  </div>
-                  <span className="text-primary font-bold text-lg shrink-0">
-                    {extra.price}
-                  </span>
-                </button>
-              );
-            })}
+        {extras.length > 0 && (
+          <div className="mt-6">
+            <h3 className="font-semibold text-foreground text-sm mb-3">Extra opties (optioneel)</h3>
+            <div className="space-y-3">
+              {extras.map((extra) => {
+                const isSelected = selected.includes(extra.name);
+                return (
+                  <button
+                    key={extra.name}
+                    type="button"
+                    onClick={() => toggle(extra.name)}
+                    className={`w-full flex items-start gap-4 p-4 rounded-xl border text-left transition-all ${
+                      isSelected
+                        ? "border-primary bg-primary/5"
+                        : "border-border bg-card hover:border-muted-foreground/30"
+                    }`}
+                  >
+                    <Checkbox
+                      checked={isSelected}
+                      className="mt-1 shrink-0 pointer-events-none"
+                    />
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-foreground">{extra.name}</h4>
+                      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                        {extra.description}
+                      </p>
+                    </div>
+                    <span className="text-primary font-bold text-lg shrink-0">
+                      {extra.price}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="flex flex-col sm:flex-row gap-3 mt-6">
           <Button
