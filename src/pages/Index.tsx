@@ -7,7 +7,7 @@ import maandelijksImg from "@/assets/maandelijks.jpg";
 import interieurImg from "@/assets/interieur.jpg";
 import exterieurImg from "@/assets/exterieur.jpg";
 import combiImg from "@/assets/combi.jpg";
-import { MapPin, Car, Sparkles, Phone } from "lucide-react";
+import { MapPin, Car, Sparkles, Phone, MessageCircle } from "lucide-react";
 
 const services = [
   {
@@ -120,16 +120,27 @@ const Index = () => (
 
     <section className="py-20 px-4 border-t border-border">
       <div className="container mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Klaar Voor Een Glanzende Auto?</h2>
-        <p className="text-muted-foreground text-lg mb-8">
-          Neem vandaag nog contact op voor een vrijblijvende offerte. Wij komen bij u langs in de regio Amersfoort.
+        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Offerte Op Maat Aanvragen</h2>
+        <p className="text-muted-foreground text-lg mb-4">
+          Elke auto verdient een persoonlijke aanpak. Neem contact op en wij maken een offerte op maat — geheel vrijblijvend.
         </p>
-        <a href="tel:0685038115">
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 text-base px-8">
-            <Phone className="w-5 h-5" />
-            Bel Ons: 06 - 85 03 81 15
-          </Button>
-        </a>
+        <p className="text-muted-foreground mb-8">
+          Bel of app ons en wij adviseren u graag over het beste pakket voor uw auto.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:0685038115">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 text-base px-8 w-full sm:w-auto">
+              <Phone className="w-5 h-5" />
+              Bel: 06 - 85 03 81 15
+            </Button>
+          </a>
+          <a href="https://wa.me/31685038115" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 gap-2 text-base px-8 w-full sm:w-auto">
+              <MessageCircle className="w-5 h-5" />
+              WhatsApp
+            </Button>
+          </a>
+        </div>
       </div>
     </section>
 
