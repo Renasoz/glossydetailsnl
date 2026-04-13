@@ -29,7 +29,7 @@ const categories = [
   { label: "Maandelijks", href: "/maandelijks" },
 ];
 
-const PackageCard = ({ pkg, onSelect }: { pkg: Package; onSelect: (name: string) => void }) => (
+const PackageCard = ({ pkg, onSelect }: { pkg: Package; onSelect: (name: string, price: string) => void }) => (
   <div
     className={`relative rounded-2xl p-8 border transition-all hover:-translate-y-1 hover:shadow-2xl ${
       pkg.popular
@@ -56,7 +56,7 @@ const PackageCard = ({ pkg, onSelect }: { pkg: Package; onSelect: (name: string)
       ))}
     </ul>
     <Button
-      onClick={() => onSelect(pkg.name)}
+      onClick={() => onSelect(pkg.name, pkg.price)}
       className={`w-full ${
         pkg.popular
           ? "bg-primary text-primary-foreground hover:bg-primary/90"
@@ -73,13 +73,13 @@ const PackageSection = ({ id, title, subtitle, packages, image, extras }: Packag
   const location = useLocation();
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPkg, setSelectedPkg] = useState("");
-
-  const handleSelect = (pkgName: string) => {
+  const [selectedPrice, setSelectedPrice] = useState("");
+  const handleSelect = (pkgName: string, pkgPrice: string) => {
     if (extras && extras.length > 0) {
       setSelectedPkg(pkgName);
+      setSelectedPrice(pkgPrice);
       setModalOpen(true);
     } else {
-      // No extras — go straight to phone
       window.location.href = "tel:0685038115";
     }
   };
@@ -160,6 +160,7 @@ const PackageSection = ({ id, title, subtitle, packages, image, extras }: Packag
           open={modalOpen}
           onOpenChange={setModalOpen}
           packageName={selectedPkg}
+          packagePrice={selectedPrice}
           extras={extras}
         />
       )}
