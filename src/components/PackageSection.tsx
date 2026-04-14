@@ -32,39 +32,29 @@ const categories = [
 
 const PackageCard = ({
   pkg,
-  image,
   onSelect,
 }: {
   pkg: Package;
-  image?: string;
   onSelect: (name: string, price: string) => void;
 }) => (
   <button
     type="button"
     onClick={() => onSelect(pkg.name, pkg.price)}
-    className={`w-full flex items-center gap-4 p-4 rounded-2xl border text-left transition-all hover:shadow-lg hover:-translate-y-0.5 ${
+    className={`w-full flex items-center gap-4 p-5 rounded-2xl border text-left transition-all hover:shadow-lg hover:-translate-y-0.5 ${
       pkg.popular
         ? "border-primary bg-surface-elevated shadow-md shadow-primary/10"
         : "border-border bg-card"
     }`}
   >
-    {image && (
-      <img
-        src={image}
-        alt={pkg.name}
-        className="w-20 h-20 rounded-xl object-cover shrink-0"
-        loading="lazy"
-      />
-    )}
     <div className="flex-1 min-w-0">
       <h3 className="text-base font-serif font-bold text-foreground">{pkg.name}</h3>
-      <p className="text-sm text-muted-foreground mt-1 leading-relaxed line-clamp-3">
+      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
         {pkg.description}
       </p>
     </div>
-    <div className="shrink-0 text-right pl-3 border-l border-border">
+    <div className="shrink-0 text-right pl-4 border-l border-border">
       <span className="text-xl font-bold text-primary">{pkg.price.replace("vanaf ", "")}</span>
-      <p className="text-xs text-muted-foreground">Starts From</p>
+      <p className="text-xs text-muted-foreground">Vanaf</p>
     </div>
   </button>
 );
@@ -108,9 +98,22 @@ const PackageSection = ({ id, title, subtitle, packages, image, extras }: Packag
           })}
         </div>
 
+        {image && (
+          <div className="mb-12 max-w-3xl mx-auto rounded-2xl overflow-hidden">
+            <img
+              src={image}
+              alt={title}
+              loading="lazy"
+              width={1024}
+              height={640}
+              className="w-full h-48 md:h-64 object-cover"
+            />
+          </div>
+        )}
+
         <div className="flex flex-col gap-4 max-w-2xl mx-auto">
           {packages.map((pkg) => (
-            <PackageCard key={pkg.name} pkg={pkg} image={image} onSelect={handleSelect} />
+            <PackageCard key={pkg.name} pkg={pkg} onSelect={handleSelect} />
           ))}
         </div>
 
