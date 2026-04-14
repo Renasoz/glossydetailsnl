@@ -5,6 +5,7 @@ export interface Package {
   description: string;
   features: string[];
   popular?: boolean;
+  extras?: ExtraOption[];
 }
 
 export const maandPakketten: Package[] = [
@@ -100,6 +101,13 @@ export const exterieurPakketten: Package[] = [
       "Velgen & banden",
       "Ramen & spiegels",
       "Drogen & afwerking",
+    ],
+    extras: [
+      {
+        name: "Waxlaag",
+        description: "Een beschermende waxlaag over de volledige autolak voor extra glans en bescherming.",
+        price: "€20",
+      },
     ],
   },
   {
