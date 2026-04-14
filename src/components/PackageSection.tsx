@@ -36,11 +36,11 @@ const PackageCard = ({
   onSelect,
 }: {
   pkg: Package;
-  onSelect: (name: string, price: string) => void;
+  onSelect: (name: string, price: string, extras?: ExtraOption[]) => void;
 }) => (
   <button
     type="button"
-    onClick={() => onSelect(pkg.name, pkg.price)}
+    onClick={() => onSelect(pkg.name, pkg.price, pkg.extras)}
     className={`w-full flex items-center gap-4 p-5 rounded-2xl border text-left transition-all hover:shadow-lg hover:-translate-y-0.5 ${
       pkg.popular
         ? "border-primary bg-surface-elevated shadow-md shadow-primary/10"
