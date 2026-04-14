@@ -12,6 +12,7 @@ interface Package {
   description: string;
   features: string[];
   popular?: boolean;
+  extras?: ExtraOption[];
 }
 
 interface PackageSectionProps {
