@@ -102,6 +102,13 @@ export const exterieurPakketten: Package[] = [
       "Ramen & spiegels",
       "Drogen & afwerking",
     ],
+    extras: [
+      {
+        name: "Waxlaag",
+        description: "Een beschermende waxlaag over de volledige autolak voor extra glans en bescherming.",
+        price: "€20",
+      },
+    ],
   },
   {
     name: "Exterieur Glans",
