@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Check, Phone, MessageCircle } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import ExtrasModal from "@/components/ExtrasModal";
@@ -9,6 +9,7 @@ interface Package {
   name: string;
   price: string;
   period?: string;
+  description: string;
   features: string[];
   popular?: boolean;
 }
@@ -29,44 +30,43 @@ const categories = [
   { label: "Maandelijks", href: "/maandelijks" },
 ];
 
-const PackageCard = ({ pkg, onSelect }: { pkg: Package; onSelect: (name: string, price: string) => void }) => (
-  <div
-    className={`relative rounded-2xl p-8 border transition-all hover:-translate-y-1 hover:shadow-2xl ${
+const PackageCard = ({
+  pkg,
+  image,
+  onSelect,
+}: {
+  pkg: Package;
+  image?: string;
+  onSelect: (name: string, price: string) => void;
+}) => (
+  <button
+    type="button"
+    onClick={() => onSelect(pkg.name, pkg.price)}
+    className={`w-full flex items-center gap-4 p-4 rounded-2xl border text-left transition-all hover:shadow-lg hover:-translate-y-0.5 ${
       pkg.popular
-        ? "border-primary bg-surface-elevated shadow-lg shadow-primary/10"
+        ? "border-primary bg-surface-elevated shadow-md shadow-primary/10"
         : "border-border bg-card"
     }`}
   >
-    {pkg.popular && (
-      <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-semibold px-4 py-1 rounded-full">
-        Meest Gekozen
-      </span>
+    {image && (
+      <img
+        src={image}
+        alt={pkg.name}
+        className="w-20 h-20 rounded-xl object-cover shrink-0"
+        loading="lazy"
+      />
     )}
-    <h3 className="text-xl font-serif font-bold mb-2">{pkg.name}</h3>
-    <div className="mb-6">
-      <span className="text-3xl font-bold text-gradient-gold">{pkg.price}</span>
-      {pkg.period && <span className="text-muted-foreground text-sm ml-1">/{pkg.period}</span>}
+    <div className="flex-1 min-w-0">
+      <h3 className="text-base font-serif font-bold text-foreground">{pkg.name}</h3>
+      <p className="text-sm text-muted-foreground mt-1 leading-relaxed line-clamp-3">
+        {pkg.description}
+      </p>
     </div>
-    <ul className="space-y-3 mb-8">
-      {pkg.features.map((f, i) => (
-        <li key={i} className="flex items-start gap-3 text-sm text-secondary-foreground">
-          <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-          {f}
-        </li>
-      ))}
-    </ul>
-    <Button
-      onClick={() => onSelect(pkg.name, pkg.price)}
-      className={`w-full ${
-        pkg.popular
-          ? "bg-primary text-primary-foreground hover:bg-primary/90"
-          : "bg-secondary text-secondary-foreground hover:bg-muted"
-      }`}
-    >
-      <Phone className="w-4 h-4 mr-2" />
-      Vraag Offerte Aan
-    </Button>
-  </div>
+    <div className="shrink-0 text-right pl-3 border-l border-border">
+      <span className="text-xl font-bold text-primary">{pkg.price.replace("vanaf ", "")}</span>
+      <p className="text-xs text-muted-foreground">Starts From</p>
+    </div>
+  </button>
 );
 
 const PackageSection = ({ id, title, subtitle, packages, image, extras }: PackageSectionProps) => {
@@ -108,22 +108,9 @@ const PackageSection = ({ id, title, subtitle, packages, image, extras }: Packag
           })}
         </div>
 
-        {image && (
-          <div className="mb-12 max-w-3xl mx-auto rounded-2xl overflow-hidden">
-            <img
-              src={image}
-              alt={title}
-              loading="lazy"
-              width={1024}
-              height={640}
-              className="w-full h-48 md:h-64 object-cover"
-            />
-          </div>
-        )}
-
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="flex flex-col gap-4 max-w-2xl mx-auto">
           {packages.map((pkg) => (
-            <PackageCard key={pkg.name} pkg={pkg} onSelect={handleSelect} />
+            <PackageCard key={pkg.name} pkg={pkg} image={image} onSelect={handleSelect} />
           ))}
         </div>
 
