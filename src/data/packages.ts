@@ -93,7 +93,7 @@ export const interieurPakketten: Package[] = [
 export const exterieurPakketten: Package[] = [
   {
     name: "Exterieur Basis",
-    price: "vanaf €69",
+    price: "vanaf €79",
     description: "Een grondige handwas met snow foam. Velgen, banden en ramen worden netjes afgewerkt.",
     features: [
       "Handwas met snow foam",
@@ -104,13 +104,12 @@ export const exterieurPakketten: Package[] = [
   },
   {
     name: "Exterieur Glans",
-    price: "vanaf €199",
+    price: "vanaf €149",
     popular: true,
-    description: "Exterieur helemaal schoon, glad en beschermd dankzij polijsten en een wax beschermlaag.",
+    description: "Exterieur helemaal schoon, glad en beschermd dankzij een wax beschermlaag en kunststofvoeding.",
     features: [
       "Alles uit Basis",
       "Klei-behandeling",
-      "Machine polijsten (1-stap)",
       "Wax beschermlaag",
       "Kunststof/plastic voeding",
       "Chroomwerk polijsten",
