@@ -1,3 +1,5 @@
+import type { ExtraOption } from "@/data/packages";
+
 export interface Package {
   name: string;
   price: string;
@@ -5,6 +7,7 @@ export interface Package {
   description: string;
   features: string[];
   popular?: boolean;
+  extras?: ExtraOption[];
 }
 
 export const maandPakketten: Package[] = [
