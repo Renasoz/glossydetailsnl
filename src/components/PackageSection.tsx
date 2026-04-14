@@ -65,9 +65,11 @@ const PackageSection = ({ id, title, subtitle, packages, image, extras }: Packag
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPkg, setSelectedPkg] = useState("");
   const [selectedPrice, setSelectedPrice] = useState("");
-  const handleSelect = (pkgName: string, pkgPrice: string) => {
+  const [selectedPkgExtras, setSelectedPkgExtras] = useState<ExtraOption[]>([]);
+  const handleSelect = (pkgName: string, pkgPrice: string, pkgExtras?: ExtraOption[]) => {
     setSelectedPkg(pkgName);
     setSelectedPrice(pkgPrice);
+    setSelectedPkgExtras(pkgExtras ?? []);
     setModalOpen(true);
   };
 
@@ -147,7 +149,7 @@ const PackageSection = ({ id, title, subtitle, packages, image, extras }: Packag
         onOpenChange={setModalOpen}
         packageName={selectedPkg}
         packagePrice={selectedPrice}
-        extras={extras ?? []}
+        extras={[...(extras ?? []), ...selectedPkgExtras]}
       />
     </section>
   );
