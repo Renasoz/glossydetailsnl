@@ -1,5 +1,3 @@
-import type { ExtraOption } from "@/data/packages";
-
 export interface Package {
   name: string;
   price: string;
