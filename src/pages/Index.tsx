@@ -22,7 +22,7 @@ const services = [
     description: "Handwas, polijsten en keramische coating voor een showroomglans.",
     image: exterieurImg,
     href: "/exterieur",
-    startingPrice: "Vanaf €69",
+    startingPrice: "Vanaf €79",
   },
   {
     title: "Combi Pakketten",
