@@ -102,25 +102,18 @@ export const exterieurPakketten: Package[] = [
       "Ramen & spiegels",
       "Drogen & afwerking",
     ],
-    extras: [
-      {
-        name: "Waxlaag",
-        description: "Een beschermende waxlaag over de volledige autolak voor extra glans en bescherming.",
-        price: "€20",
-      },
-    ],
   },
   {
     name: "Exterieur Glans",
     price: "vanaf €149",
     popular: true,
-    description: "Exterieur helemaal schoon, glad en beschermd dankzij een wax beschermlaag en kunststofvoeding.",
+    description: "Exterieur helemaal schoon, glad en beschermd dankzij een wax beschermlaag, kunststofvoeding en semi coating op alle banden.",
     features: [
       "Alles uit Basis",
       "Klei-behandeling",
       "Wax beschermlaag",
       "Kunststof/plastic voeding",
-      "Chroomwerk polijsten",
+      "Semi coating op alle banden",
     ],
   },
   {
