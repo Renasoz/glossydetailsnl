@@ -220,28 +220,6 @@ export const exterieurExtras: ExtraOption[] = [
   },
 ];
 
-export const interieurExtras: ExtraOption[] = [
-  {
-    name: "Stoomreiniging",
-    description: "Wil je dat het interieur van jouw auto écht diep gereinigd wordt? Met stoomreiniging verwijderen we vuil, bacteriën en geurtjes uit alle hoeken.",
-    price: "€50",
-  },
-  {
-    name: "Vlekverwijdering Grondig",
-    description: "Zijn er vlekken in de bekleding die meer aandacht vereisen dan een basis behandeling? Met deze optie krijgen jou stoelen extra grondige reiniging.",
-    price: "€40",
-  },
-  {
-    name: "Dieptereiniging Vloer",
-    description: "Zijn jou matten bruin in plaats van zwart? Dan word het eens tijd deze grondig te laten reinigen.",
-    price: "€30",
-  },
-  {
-    name: "Kunststof Voeding",
-    description: "Wil je dat jou kunststofdelen van het interieur er weer helemaal strak en netjes bijstaan? Laat deze dan voeden voor het perfecte resultaat.",
-    price: "€30",
-  },
-];
 
 export const combiExtras: ExtraOption[] = [
   ...exterieurExtras,
