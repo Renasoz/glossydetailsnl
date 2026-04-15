@@ -77,7 +77,7 @@ export const interieurExtras: ExtraOption[] = [
 export const interieurPakketten: Package[] = [
   {
     name: "Interieur Basis",
-    price: "vanaf €89",
+    price: "vanaf €99",
     description: "Een basis reiniging voor het interieur. Perfect voor het verwijderen van stof en opfrissen.",
     features: [
       "Volledig stofzuigen",
@@ -89,7 +89,7 @@ export const interieurPakketten: Package[] = [
   },
   {
     name: "Interieur Diep",
-    price: "vanaf €179",
+    price: "vanaf €149",
     popular: true,
     description: "Het interieur grondig gereinigd. Van vlekverwijdering tot lederreiniging voor een fris resultaat.",
     features: [
@@ -104,7 +104,7 @@ export const interieurPakketten: Package[] = [
   },
   {
     name: "Interieur Totaal",
-    price: "vanaf €279",
+    price: "vanaf €249",
     description: "Compleet interieur als nieuw. Leervoeding, antibacterieel en geurverwijdering inbegrepen.",
     features: [
       "Alles uit Diep",
@@ -131,7 +131,7 @@ export const exterieurPakketten: Package[] = [
   },
   {
     name: "Exterieur Glans",
-    price: "vanaf €149",
+    price: "vanaf €129",
     popular: true,
     description: "Exterieur helemaal schoon, glad en beschermd dankzij een wax beschermlaag, kunststofvoeding en semi coating op alle banden.",
     features: [
@@ -144,7 +144,7 @@ export const exterieurPakketten: Package[] = [
   },
   {
     name: "Exterieur Showroom",
-    price: "vanaf €399",
+    price: "vanaf €199",
     description: "Showroom kwaliteit met keramische coating en ruitcoating. Tot 5 jaar bescherming.",
     features: [
       "Alles uit Glans",
@@ -159,7 +159,7 @@ export const exterieurPakketten: Package[] = [
 export const combiPakketten: Package[] = [
   {
     name: "Combi Basis",
-    price: "vanaf €139",
+    price: "vanaf €149",
     description: "Het beste van beide werelden. Interieur en exterieur netjes, opgefrist en beschermd.",
     features: [
       "Uitwendige handwas & snow foam",
@@ -171,7 +171,7 @@ export const combiPakketten: Package[] = [
   },
   {
     name: "Combi Premium",
-    price: "vanaf €329",
+    price: "vanaf €249",
     popular: true,
     description: "Jouw auto van binnen en buiten weer showroom ready. Dieptereiniging en polijsten inbegrepen.",
     features: [
@@ -184,7 +184,7 @@ export const combiPakketten: Package[] = [
   },
   {
     name: "Combi Totaal",
-    price: "vanaf €599",
+    price: "vanaf €349",
     description: "Jouw auto weer helemaal zo goed als nieuw, met keramische coating en stoomreiniging.",
     features: [
       "Alles uit Combi Premium",
