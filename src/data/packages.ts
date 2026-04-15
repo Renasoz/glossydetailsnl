@@ -62,6 +62,7 @@ export const interieurPakketten: Package[] = [
       "Ramen binnenzijde",
       "Vloermatten wassen",
     ],
+    extras: interieurExtras,
   },
   {
     name: "Interieur Diep",
@@ -72,7 +73,8 @@ export const interieurPakketten: Package[] = [
       "Alles uit Basis",
       "Stoelen dieptereiniging",
       "Lederreiniging",
-      "Vlekverwijdering",
+      "Vlekverwijdering grondig",
+      "Dieptereiniging vloer",
       "Kunststof/plastic voeding",
       "Luchtzuivering",
     ],
@@ -83,6 +85,7 @@ export const interieurPakketten: Package[] = [
     description: "Compleet interieur als nieuw. Leervoeding, antibacterieel en geurverwijdering inbegrepen.",
     features: [
       "Alles uit Diep",
+      "Stoomreiniging",
       "Leervoeding & bescherming",
       "Hemelbekleding reinigen",
       "Antibacteriële behandeling",
