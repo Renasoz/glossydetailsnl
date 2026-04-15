@@ -67,12 +67,12 @@ export const interieurPakketten: Package[] = [
     name: "Interieur Diep",
     price: "vanaf €179",
     popular: true,
-    description: "Het interieur grondig gereinigd. Van vlekverwijdering tot stoomreiniging voor een fris resultaat.",
+    description: "Het interieur grondig gereinigd. Van vlekverwijdering tot lederreiniging voor een fris resultaat.",
     features: [
       "Alles uit Basis",
       "Stoelen dieptereiniging",
+      "Lederreiniging",
       "Vlekverwijdering",
-      "Stoomreiniging",
       "Kunststof/plastic voeding",
       "Luchtzuivering",
     ],
@@ -195,6 +195,11 @@ export const exterieurExtras: ExtraOption[] = [
 ];
 
 export const interieurExtras: ExtraOption[] = [
+  {
+    name: "Stoomreiniging",
+    description: "Wil je dat het interieur van jouw auto écht diep gereinigd wordt? Met stoomreiniging verwijderen we vuil, bacteriën en geurtjes uit alle hoeken.",
+    price: "€50",
+  },
   {
     name: "Vlekverwijdering Grondig",
     description: "Zijn er vlekken in de bekleding die meer aandacht vereisen dan een basis behandeling? Met deze optie krijgen jou stoelen extra grondige reiniging.",
