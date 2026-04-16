@@ -206,12 +206,7 @@ export const exterieurExtras: ExtraOption[] = [
   {
     name: "Motorruimte Reinigen",
     description: "Het hart van de auto, die qua schoonmaak de minste aandacht krijgt. Neem je motorruimte mee in de schoonmaak.",
-    price: "€40",
-  },
-  {
-    name: "Banden Dressing",
-    description: "Jou banden beschermen tegen uitdroging en UV-straling? En het ziet er ook nog eens netjes uit, de echte afmaker voor elk detail!",
-    price: "€20",
+    price: "€30",
   },
   {
     name: "Kleibehandeling",
