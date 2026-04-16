@@ -36,7 +36,7 @@ const services = [
     description: "Zorgeloos rijden met een vast maandelijks onderhoudspakket.",
     image: maandelijksImg,
     href: "/maandelijks",
-    startingPrice: "Vanaf €79/maand",
+    startingPrice: "Vanaf €89/maand",
   },
 ];
 
