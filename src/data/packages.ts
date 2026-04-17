@@ -107,6 +107,13 @@ export const interieurPakketten: Package[] = [
       "Kunststof/plastic voeding",
       "Luchtzuivering",
     ],
+    extras: [
+      {
+        name: "Dierenharen Verwijderen",
+        description: "Heb je huisdieren en zitten er hardnekkige haren in de bekleding of vloermatten? Met deze optie verwijderen we alle dierenharen grondig.",
+        price: "€35",
+      },
+    ],
   },
   {
     name: "Interieur Totaal",
@@ -119,6 +126,13 @@ export const interieurPakketten: Package[] = [
       "Hemelbekleding reinigen",
       "Antibacteriële behandeling",
       "Geurverwijdering",
+    ],
+    extras: [
+      {
+        name: "Dierenharen Verwijderen",
+        description: "Heb je huisdieren en zitten er hardnekkige haren in de bekleding of vloermatten? Met deze optie verwijderen we alle dierenharen grondig.",
+        price: "€35",
+      },
     ],
   },
 ];
