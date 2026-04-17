@@ -72,6 +72,11 @@ export const interieurExtras: ExtraOption[] = [
     description: "Wil je dat jou kunststofdelen van het interieur er weer helemaal strak en netjes bijstaan? Laat deze dan voeden voor het perfecte resultaat.",
     price: "€30",
   },
+  {
+    name: "Dierenharen Verwijderen",
+    description: "Heb je huisdieren en zitten er hardnekkige haren in de bekleding of vloermatten? Met deze optie verwijderen we alle dierenharen grondig.",
+    price: "€35",
+  },
 ];
 
 export const interieurPakketten: Package[] = [
