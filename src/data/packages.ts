@@ -91,7 +91,7 @@ export const interieurPakketten: Package[] = [
     name: "Interieur Diep",
     price: "vanaf €149",
     popular: true,
-    description: "Het interieur grondig gereinigd. Van vlekverwijdering tot lederreiniging voor een fris resultaat.",
+    description: "Het interieur grondig gereinigd. Inclusief stoomreiniging, grondige vlekverwijdering, dieptereiniging van de vloer en kunststof voeding — alle extra opties uit het Basis pakket zijn standaard inbegrepen.",
     features: [
       "Alles uit Basis",
       "Stoelen dieptereiniging",
