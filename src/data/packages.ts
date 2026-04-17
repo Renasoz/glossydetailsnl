@@ -96,6 +96,7 @@ export const interieurPakketten: Package[] = [
       "Alles uit Basis",
       "Stoelen dieptereiniging",
       "Lederreiniging",
+      "Stoomreiniging",
       "Vlekverwijdering grondig",
       "Dieptereiniging vloer",
       "Kunststof/plastic voeding",
