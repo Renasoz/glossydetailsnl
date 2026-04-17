@@ -121,11 +121,12 @@ export const exterieurPakketten: Package[] = [
   {
     name: "Exterieur Basis",
     price: "vanaf €79",
-    description: "Een grondige handwas met snow foam. Velgen, banden en ramen worden netjes afgewerkt.",
+    description: "Een grondige handwas met snow foam. Velgen, banden en ramen worden netjes afgewerkt. Daarnaast wordt er een waxlaag over de gehele auto aangebracht voor extra bescherming.",
     features: [
       "Handwas met snow foam",
       "Velgen & banden",
       "Ramen & spiegels",
+      "Waxlaag over de gehele auto",
       "Drogen & afwerking",
     ],
   },
@@ -133,7 +134,7 @@ export const exterieurPakketten: Package[] = [
     name: "Exterieur Glans",
     price: "vanaf €129",
     popular: true,
-    description: "Exterieur helemaal schoon, glad en beschermd dankzij een wax beschermlaag, kunststofvoeding en semi coating op alle banden.",
+    description: "Exterieur helemaal schoon, glad en beschermd. De waxlaag wordt met de hand aangebracht over de gehele autolak voor een extra shiny look, aangevuld met kunststofvoeding en semi coating op alle banden.",
     features: [
       "Alles uit Basis",
       "Klei-behandeling",
