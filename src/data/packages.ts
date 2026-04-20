@@ -194,7 +194,7 @@ export const combiPakketten: Package[] = [
     name: "Combi Premium",
     price: "vanaf €279",
     popular: true,
-    description: "Jouw auto van binnen en buiten weer showroom ready. Inclusief stoomreiniging, grondige vlekverwijdering, dieptereiniging van de vloer, kunststof voeding, motorruimte reinigen en kleibehandeling — alle extra opties zijn standaard inbegrepen.",
+    description: "Jouw auto van binnen en buiten weer showroom ready. Inclusief stoomreiniging, grondige vlekverwijdering, dieptereiniging van de vloer, kunststof voeding, motorruimte reinigen en kleibehandeling.",
     features: [
       "Alles uit Combi Basis",
       "Stoelen dieptereiniging",

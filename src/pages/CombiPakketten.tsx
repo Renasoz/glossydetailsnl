@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import PackageSection from "@/components/PackageSection";
 import Footer from "@/components/Footer";
-import { combiPakketten, combiExtras } from "@/data/packages";
+import { combiPakketten } from "@/data/packages";
 import combiImg from "@/assets/combi.jpg";
 
 const CombiPakketten = () => (
@@ -14,7 +14,6 @@ const CombiPakketten = () => (
         subtitle="Binnen & buiten compleet"
         packages={combiPakketten}
         image={combiImg}
-        extras={combiExtras}
       />
     </div>
     <Footer />
