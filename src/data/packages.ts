@@ -192,15 +192,22 @@ export const combiPakketten: Package[] = [
   },
   {
     name: "Combi Premium",
-    price: "vanaf €249",
+    price: "vanaf €279",
     popular: true,
-    description: "Jouw auto van binnen en buiten weer showroom ready. Dieptereiniging en polijsten inbegrepen.",
+    description: "Jouw auto van binnen en buiten weer showroom ready. Inclusief stoomreiniging, grondige vlekverwijdering, dieptereiniging van de vloer, kunststof voeding, motorruimte reinigen en kleibehandeling — alle extra opties zijn standaard inbegrepen.",
     features: [
       "Alles uit Combi Basis",
       "Stoelen dieptereiniging",
       "Machine polijsten (1-stap)",
       "Wax beschermlaag",
       "Luchtverfrisser",
+    ],
+    extras: [
+      {
+        name: "Dierenharen Verwijderen",
+        description: "Heb je huisdieren en zitten er hardnekkige haren in de bekleding of vloermatten? Met deze optie verwijderen we alle dierenharen grondig.",
+        price: "€35",
+      },
     ],
   },
   {
