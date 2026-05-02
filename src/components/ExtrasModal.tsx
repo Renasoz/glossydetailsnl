@@ -79,15 +79,18 @@ const ExtrasModal = ({ open, onOpenChange, packageName, packagePrice, extras }: 
                 key={size.value}
                 type="button"
                 onClick={() => { setCarSize(size.value); setShowError(false); }}
-                className={`w-full flex items-center justify-between p-4 rounded-xl border text-left transition-all ${
+                className={`w-full flex items-center justify-between gap-4 p-4 rounded-xl border text-left transition-all ${
                   isActive
                     ? "border-primary bg-primary/5"
                     : "border-border bg-card hover:border-muted-foreground/30"
                 }`}
               >
-                <span className="font-medium text-foreground">{size.label}</span>
+                <div className="flex-1 min-w-0">
+                  <span className="font-medium text-foreground block">{size.label}</span>
+                  <span className="text-sm text-muted-foreground mt-0.5 block">{size.description}</span>
+                </div>
                 {total !== null && (
-                  <span className="text-primary font-bold text-lg">€{total}</span>
+                  <span className="text-primary font-bold text-lg shrink-0">€{total}</span>
                 )}
               </button>
             );
