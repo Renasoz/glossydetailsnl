@@ -152,27 +152,16 @@ export const exterieurPakketten: Package[] = [
   },
   {
     name: "Exterieur Glans",
-    price: "vanaf €129",
+    price: "vanaf €169",
     popular: true,
-    description: "Exterieur helemaal schoon, glad en beschermd. De waxlaag wordt met de hand aangebracht over de gehele autolak voor een extra shiny look, aangevuld met kunststofvoeding en semi coating op alle banden.",
+    description: "Exterieur helemaal schoon, glad en beschermd. De waxlaag wordt met de hand aangebracht over de gehele autolak voor een extra shiny look. Inclusief reiniging en voeding van de motorruimte en voeding van alle kunststoffen en plastics aan de buitenkant van de auto, aangevuld met semi coating op alle banden.",
     features: [
       "Alles uit Basis",
       "Klei-behandeling",
       "Wax beschermlaag",
-      "Kunststof/plastic voeding",
+      "Motorruimte reinigen & voeden",
+      "Kunststof/plastic voeding (buitenkant)",
       "Semi coating op alle banden",
-    ],
-  },
-  {
-    name: "Exterieur Showroom",
-    price: "vanaf €199",
-    description: "Showroom kwaliteit met keramische coating en ruitcoating. Tot 5 jaar bescherming.",
-    features: [
-      "Alles uit Glans",
-      "Machine polijsten (2-stap)",
-      "Keramische coating",
-      "Ruitcoating",
-      "Tot 5 jaar bescherming",
     ],
   },
 ];
@@ -194,11 +183,11 @@ export const combiPakketten: Package[] = [
     name: "Combi Premium",
     price: "vanaf €249",
     popular: true,
-    description: "Jouw auto van binnen en buiten weer showroom ready. Inclusief stoomreiniging, grondige vlekverwijdering, dieptereiniging van de vloer, kunststof voeding, motorruimte reinigen en kleibehandeling.",
+    description: "Jouw auto van binnen en buiten weer showroom ready. Inclusief stoomreiniging, grondige vlekverwijdering, dieptereiniging van de vloer, kunststof voeding, motorruimte reinigen, kleibehandeling en een handmatig aangebrachte waxlaag over de gehele autolak.",
     features: [
       "Alles uit Combi Basis",
       "Stoelen dieptereiniging",
-      "Wax beschermlaag",
+      "Handmatig aangebrachte waxlaag",
       "Luchtverfrisser",
     ],
     extras: [
