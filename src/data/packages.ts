@@ -82,7 +82,7 @@ export const interieurExtras: ExtraOption[] = [
 export const interieurPakketten: Package[] = [
   {
     name: "Interieur Basis",
-    price: "vanaf €99",
+    price: "vanaf €69",
     description: "Een basis reiniging voor het interieur. Perfect voor het verwijderen van stof en opfrissen.",
     features: [
       "Volledig stofzuigen",
@@ -94,7 +94,7 @@ export const interieurPakketten: Package[] = [
   },
   {
     name: "Interieur Diep",
-    price: "vanaf €149",
+    price: "vanaf €119",
     popular: true,
     description: "Het interieur grondig gereinigd. Inclusief stoomreiniging, grondige vlekverwijdering, dieptereiniging van de vloer en kunststof voeding — alle extra opties uit het Basis pakket zijn standaard inbegrepen.",
     features: [
@@ -117,7 +117,7 @@ export const interieurPakketten: Package[] = [
   },
   {
     name: "Interieur Totaal",
-    price: "vanaf €249",
+    price: "vanaf €219",
     description: "Compleet interieur als nieuw. Leervoeding, antibacterieel en geurverwijdering inbegrepen.",
     features: [
       "Alles uit Diep",
@@ -180,7 +180,7 @@ export const exterieurPakketten: Package[] = [
 export const combiPakketten: Package[] = [
   {
     name: "Combi Basis",
-    price: "vanaf €149",
+    price: "vanaf €119",
     description: "Het beste van beide werelden. Interieur en exterieur netjes, opgefrist en beschermd.",
     features: [
       "Uitwendige handwas & snow foam",
@@ -192,13 +192,12 @@ export const combiPakketten: Package[] = [
   },
   {
     name: "Combi Premium",
-    price: "vanaf €279",
+    price: "vanaf €249",
     popular: true,
     description: "Jouw auto van binnen en buiten weer showroom ready. Inclusief stoomreiniging, grondige vlekverwijdering, dieptereiniging van de vloer, kunststof voeding, motorruimte reinigen en kleibehandeling.",
     features: [
       "Alles uit Combi Basis",
       "Stoelen dieptereiniging",
-      "Machine polijsten (1-stap)",
       "Wax beschermlaag",
       "Luchtverfrisser",
     ],
@@ -212,12 +211,11 @@ export const combiPakketten: Package[] = [
   },
   {
     name: "Combi Totaal",
-    price: "vanaf €349",
-    description: "Jouw auto weer helemaal zo goed als nieuw, met keramische coating en stoomreiniging.",
+    price: "vanaf €319",
+    description: "Jouw auto weer helemaal zo goed als nieuw, met stoomreiniging.",
     features: [
       "Alles uit Combi Premium",
       "Leervoeding & bescherming",
-      "Keramische coating",
       "Stoomreiniging interieur",
       "Ruitcoating & chroomwerk",
     ],
