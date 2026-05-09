@@ -109,13 +109,7 @@ export const interieurPakketten: Package[] = [
       "Dieptereiniging automatten + vloer",
       "Instaplijsten/deurnaden",
     ],
-    extras: [
-      {
-        name: "Dierenharen Verwijderen",
-        description: "Heb je huisdieren en zitten er hardnekkige haren in de bekleding of vloermatten? Met deze optie verwijderen we alle dierenharen grondig.",
-        price: "€35",
-      },
-    ],
+    extras: interieurExtras,
   },
 ];
 
