@@ -63,9 +63,6 @@ const ExtrasModal = ({ open, onOpenChange, packageName, packagePrice, extras }: 
     let msg = `Hallo! Ik heb interesse in het pakket "${packageName}" voor een ${sizeLabel}.`;
     if (city.trim()) {
       msg += ` Ik kom uit ${city.trim()}.`;
-      if (outsideArea) {
-        msg += ` (Buiten omgeving Amersfoort, +€${DELIVERY_FEE} voorrijkosten)`;
-      }
     }
     if (selected.length > 0) {
       msg += ` Met extra opties: ${selected.join(", ")}.`;
@@ -149,16 +146,6 @@ const ExtrasModal = ({ open, onOpenChange, packageName, packagePrice, extras }: 
           />
           {showCityError && (
             <p className="text-destructive text-sm mt-1">Vul uw stad of provincie in.</p>
-          )}
-          {outsideArea && (
-            <p className="text-sm text-muted-foreground mt-2">
-              Buiten omgeving Amersfoort: <span className="text-primary font-semibold">+€{DELIVERY_FEE} voorrijkosten</span> bovenop het pakket.
-            </p>
-          )}
-          {city.trim() && !outsideArea && (
-            <p className="text-sm text-muted-foreground mt-2">
-              Binnen omgeving Amersfoort: geen voorrijkosten.
-            </p>
           )}
         </div>
 
