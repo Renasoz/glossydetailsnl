@@ -7,7 +7,7 @@ import maandelijksImg from "@/assets/maandelijks.jpg";
 import interieurImg from "@/assets/interieur.jpg";
 import exterieurImg from "@/assets/exterieur.jpg";
 import combiImg from "@/assets/combi.jpg";
-import { MapPin, Car, Sparkles, Phone, MessageCircle } from "lucide-react";
+import { MapPin, Car, Sparkles, Phone, MessageCircle, ShieldCheck, Hand, Droplets, Clock } from "lucide-react";
 
 const services = [
   {
