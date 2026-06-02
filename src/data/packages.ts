@@ -159,11 +159,10 @@ export const combiPakketten: Package[] = [
     name: "Combi Premium",
     price: "vanaf €249",
     popular: true,
-    description: "Jouw auto van binnen en buiten weer showroom ready. Inclusief stoomreiniging, grondige vlekverwijdering, dieptereiniging van de vloer, kunststof voeding, motorruimte reinigen, kleibehandeling en een handmatig aangebrachte waxlaag over de gehele autolak.",
+    description: "Jouw auto van binnen en buiten weer showroom ready. Inclusief stoomreiniging, grondige vlekverwijdering, dieptereiniging van de vloer, kunststof voeding, motorruimte reinigen en kleibehandeling.",
     features: [
       "Alles uit Combi Basis",
       "Stoelen dieptereiniging",
-      "Handmatig aangebrachte waxlaag",
       "Luchtverfrisser",
     ],
     extras: [
@@ -171,6 +170,11 @@ export const combiPakketten: Package[] = [
         name: "Dierenharen Verwijderen",
         description: "Heb je huisdieren en zitten er hardnekkige haren in de bekleding of vloermatten? Met deze optie verwijderen we alle dierenharen grondig.",
         price: "€35",
+      },
+      {
+        name: "Handmatig Aangebrachte Waxlaag",
+        description: "Wil je een extra beschermende en glanzende laag over de gehele autolak? Deze waxlaag wordt met de hand aangebracht en blijft tot een jaar zitten voor langdurige bescherming en een diepe glans.",
+        price: "€50",
       },
     ],
   },
