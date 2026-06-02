@@ -93,7 +93,6 @@ export const interieurPakketten: Package[] = [
       "Vlekverwijdering bekleding basis",
       "Deurpanelen reinigen",
     ],
-    extras: interieurExtras,
   },
   {
     name: "Showroom Interieur Detail",
@@ -109,7 +108,6 @@ export const interieurPakketten: Package[] = [
       "Dieptereiniging automatten + vloer",
       "Instaplijsten/deurnaden",
     ],
-    extras: interieurExtras,
   },
 ];
 
