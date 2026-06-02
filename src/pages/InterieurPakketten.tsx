@@ -14,6 +14,7 @@ const InterieurPakketten = () => (
         subtitle="Van binnen als nieuw"
         packages={interieurPakketten}
         image={interieurImg}
+        extras={interieurExtras}
       />
     </div>
     <Footer />
