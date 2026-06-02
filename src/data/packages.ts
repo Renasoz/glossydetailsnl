@@ -139,7 +139,7 @@ export const exterieurPakketten: Package[] = [
     features: [
       "Alles uit Basis",
       "Klei-behandeling",
-      "Wax beschermlaag",
+      "Wax beschermlaag (handmatig aangebracht, 1 jaar bescherming)",
       "Motorruimte reinigen & voeden",
       "Kunststof/plastic voeding (buitenkant)",
       "Semi coating op alle banden",
