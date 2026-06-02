@@ -120,7 +120,7 @@ export const exterieurPakketten: Package[] = [
       "Handwas met snow foam",
       "Velgen & banden",
       "Ramen & spiegels",
-      "Waxlaag over de gehele auto",
+      "Waxlaag over de gehele auto (3 maanden bescherming)",
       "Drogen & afwerking",
     ],
     extras: [
@@ -135,11 +135,11 @@ export const exterieurPakketten: Package[] = [
     name: "Exterieur Glans",
     price: "vanaf €169",
     popular: true,
-    description: "Exterieur helemaal schoon, glad en beschermd. De waxlaag wordt met de hand aangebracht over de gehele autolak voor een extra shiny look. Inclusief reiniging en voeding van de motorruimte en voeding van alle kunststoffen en plastics aan de buitenkant van de auto, aangevuld met semi coating op alle banden.",
+    description: "Exterieur helemaal schoon, glad en beschermd. De waxlaag wordt met de hand aangebracht over de gehele autolak voor een extra shiny look en blijft tot 1 jaar zitten. Inclusief reiniging en voeding van de motorruimte en voeding van alle kunststoffen en plastics aan de buitenkant van de auto, aangevuld met semi coating op alle banden.",
     features: [
       "Alles uit Basis",
       "Klei-behandeling",
-      "Wax beschermlaag",
+      "Wax beschermlaag (handmatig aangebracht, 1 jaar bescherming)",
       "Motorruimte reinigen & voeden",
       "Kunststof/plastic voeding (buitenkant)",
       "Semi coating op alle banden",
