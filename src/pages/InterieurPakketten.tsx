@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import PackageSection from "@/components/PackageSection";
 import Footer from "@/components/Footer";
-import { interieurPakketten } from "@/data/packages";
+import { interieurPakketten, interieurExtras } from "@/data/packages";
 import interieurImg from "@/assets/interieur.jpg";
 
 const InterieurPakketten = () => (
