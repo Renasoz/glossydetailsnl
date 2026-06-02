@@ -120,7 +120,7 @@ export const exterieurPakketten: Package[] = [
       "Handwas met snow foam",
       "Velgen & banden",
       "Ramen & spiegels",
-      "Waxlaag over de gehele auto",
+      "Waxlaag over de gehele auto (3 maanden bescherming)",
       "Drogen & afwerking",
     ],
     extras: [
