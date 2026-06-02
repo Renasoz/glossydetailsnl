@@ -123,6 +123,13 @@ export const exterieurPakketten: Package[] = [
       "Waxlaag over de gehele auto",
       "Drogen & afwerking",
     ],
+    extras: [
+      {
+        name: "Kunststof Voeding",
+        description: "Wil je dat jou kunststofdelen van het exterieur er weer helemaal strak en netjes bijstaan? Laat deze dan voeden voor het perfecte resultaat.",
+        price: "€30",
+      },
+    ],
   },
   {
     name: "Exterieur Glans",
