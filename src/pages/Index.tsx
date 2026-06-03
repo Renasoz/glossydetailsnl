@@ -3,10 +3,10 @@ import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import maandelijksImg from "@/assets/maandelijks.jpg";
-import interieurImg from "@/assets/interieur.jpg";
-import exterieurImg from "@/assets/exterieur.jpg";
-import combiImg from "@/assets/combi.jpg";
+import maandelijksImg from "@/assets/maandelijks.jpg.asset.json";
+import interieurImg from "@/assets/interieur.jpg.asset.json";
+import exterieurImg from "@/assets/exterieur.jpg.asset.json";
+import combiImg from "@/assets/combi.jpg.asset.json";
 import { MapPin, Car, Sparkles, Phone, MessageCircle, ShieldCheck, Hand, Droplets, Clock } from "lucide-react";
 
 const services = [

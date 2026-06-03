@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import PackageSection from "@/components/PackageSection";
 import Footer from "@/components/Footer";
 import { interieurPakketten, interieurExtras } from "@/data/packages";
-import interieurImg from "@/assets/interieur.jpg";
+import interieurImg from "@/assets/interieur.jpg.asset.json";
 
 const InterieurPakketten = () => (
   <div className="min-h-screen bg-background">
