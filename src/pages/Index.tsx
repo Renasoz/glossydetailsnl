@@ -3,38 +3,38 @@ import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import maandelijksImg from "@/assets/maandelijks.jpg";
-import interieurImg from "@/assets/interieur.jpg";
-import exterieurImg from "@/assets/exterieur.jpg";
-import combiImg from "@/assets/combi.jpg";
+import maandelijksImg from "@/assets/maandelijks.jpg.asset.json";
+import interieurImg from "@/assets/interieur.jpg.asset.json";
+import exterieurImg from "@/assets/exterieur.jpg.asset.json";
+import combiImg from "@/assets/combi.jpg.asset.json";
 import { MapPin, Car, Sparkles, Phone, MessageCircle, ShieldCheck, Hand, Droplets, Clock } from "lucide-react";
 
 const services = [
   {
     title: "Interieur Detailing",
     description: "Van stofzuigen tot dieptereiniging en leerbehandeling — uw interieur als nieuw.",
-    image: interieurImg,
+    image: interieurImg.url,
     href: "/interieur",
     startingPrice: "Vanaf €79",
   },
   {
     title: "Exterieur Detailing",
     description: "Handwas, polijsten en keramische coating voor een showroomglans.",
-    image: exterieurImg,
+    image: exterieurImg.url,
     href: "/exterieur",
     startingPrice: "Vanaf €79",
   },
   {
     title: "Combi Pakketten",
     description: "Binnen & buiten compleet verzorgd in één behandeling.",
-    image: combiImg,
+    image: combiImg.url,
     href: "/combi",
     startingPrice: "Vanaf €119",
   },
   {
     title: "Maandelijks Onderhoud",
     description: "Zorgeloos rijden met een vast maandelijks onderhoudspakket.",
-    image: maandelijksImg,
+    image: maandelijksImg.url,
     href: "/maandelijks",
     startingPrice: "Vanaf €79/maand",
   },

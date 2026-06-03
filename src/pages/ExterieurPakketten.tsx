@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import PackageSection from "@/components/PackageSection";
 import Footer from "@/components/Footer";
 import { exterieurPakketten, exterieurExtras } from "@/data/packages";
-import exterieurImg from "@/assets/exterieur.jpg";
+import exterieurImg from "@/assets/exterieur.jpg.asset.json";
 
 const ExterieurPakketten = () => (
   <div className="min-h-screen bg-background">
@@ -13,7 +13,7 @@ const ExterieurPakketten = () => (
         title="Exterieur Pakketten"
         subtitle="Stralend van buiten"
         packages={exterieurPakketten}
-        image={exterieurImg}
+        image={exterieurImg.url}
         extras={exterieurExtras}
       />
     </div>
