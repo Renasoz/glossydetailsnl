@@ -11,7 +11,7 @@ const MaandelijksPakketten = () => (
       <section className="py-24 px-4">
         <div className="container mx-auto max-w-3xl text-center">
           <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-3">Maandelijks Onderhoud</p>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Vanaf €89 per maand</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Vanaf €79 per maand</h2>
           <img
             src={maandelijksImg}
             alt="Maandelijks onderhoud"
