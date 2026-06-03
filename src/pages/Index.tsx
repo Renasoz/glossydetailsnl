@@ -15,7 +15,7 @@ const services = [
     description: "Van stofzuigen tot dieptereiniging en leerbehandeling — uw interieur als nieuw.",
     image: interieurImg,
     href: "/interieur",
-    startingPrice: "Vanaf €99",
+    startingPrice: "Vanaf €79",
   },
   {
     title: "Exterieur Detailing",
@@ -29,14 +29,14 @@ const services = [
     description: "Binnen & buiten compleet verzorgd in één behandeling.",
     image: combiImg,
     href: "/combi",
-    startingPrice: "Vanaf €149",
+    startingPrice: "Vanaf €119",
   },
   {
     title: "Maandelijks Onderhoud",
     description: "Zorgeloos rijden met een vast maandelijks onderhoudspakket.",
     image: maandelijksImg,
     href: "/maandelijks",
-    startingPrice: "Vanaf €89/maand",
+    startingPrice: "Vanaf €79/maand",
   },
 ];
 
