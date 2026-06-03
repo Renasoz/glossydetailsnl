@@ -129,6 +129,11 @@ export const exterieurPakketten: Package[] = [
         description: "Wil je dat jou kunststofdelen van het exterieur er weer helemaal strak en netjes bijstaan? Laat deze dan voeden voor het perfecte resultaat.",
         price: "€30",
       },
+      {
+        name: "Handmatig Aangebrachte Waxlaag",
+        description: "Wil je een extra beschermende en glanzende laag over de gehele autolak? Deze waxlaag wordt met de hand aangebracht en blijft tot een jaar zitten voor langdurige bescherming en een diepe glans. De waxlaag die al in het pakket zit blijft 3 maanden zitten op de auto.",
+        price: "€50",
+      },
     ],
   },
   {
