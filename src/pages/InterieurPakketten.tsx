@@ -13,7 +13,7 @@ const InterieurPakketten = () => (
         title="Interieur Pakketten"
         subtitle="Van binnen als nieuw"
         packages={interieurPakketten}
-        image={interieurImg}
+        image={interieurImg.url}
         extras={interieurExtras}
       />
     </div>

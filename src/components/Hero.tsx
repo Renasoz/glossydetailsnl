@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Hero = () => (
   <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
     <img
-      src={heroCar}
+      src={heroCar.url}
       alt="Mobiele auto detailing bij u thuis"
       className="absolute inset-0 w-full h-full object-cover"
       width={1920}

@@ -13,7 +13,7 @@ const CombiPakketten = () => (
         title="Combi Pakketten"
         subtitle="Binnen & buiten compleet"
         packages={combiPakketten}
-        image={combiImg}
+        image={combiImg.url}
       />
     </div>
     <Footer />

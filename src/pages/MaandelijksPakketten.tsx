@@ -13,7 +13,7 @@ const MaandelijksPakketten = () => (
           <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-3">Maandelijks Onderhoud</p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Vanaf €79 per maand</h2>
           <img
-            src={maandelijksImg}
+            src={maandelijksImg.url}
             alt="Maandelijks onderhoud"
             className="w-full max-w-lg mx-auto rounded-2xl mb-8 object-cover aspect-video"
           />
