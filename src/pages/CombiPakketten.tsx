@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import PackageSection from "@/components/PackageSection";
 import Footer from "@/components/Footer";
 import { combiPakketten } from "@/data/packages";
-import combiImg from "@/assets/combi.jpg.asset.json";
+import combiImg from "@/assets/maandelijks.jpg.asset.json";
 
 const CombiPakketten = () => (
   <div className="min-h-screen bg-background">
