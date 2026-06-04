@@ -22,6 +22,8 @@ interface PackageSectionProps {
   packages: Package[];
   image?: string;
   extras?: ExtraOption[];
+  imageWrapperClassName?: string;
+  imageClassName?: string;
 }
 
 const categories = [
@@ -60,7 +62,7 @@ const PackageCard = ({
   </button>
 );
 
-const PackageSection = ({ id, title, subtitle, packages, image, extras }: PackageSectionProps) => {
+const PackageSection = ({ id, title, subtitle, packages, image, extras, imageWrapperClassName, imageClassName }: PackageSectionProps) => {
   const location = useLocation();
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPkg, setSelectedPkg] = useState("");
@@ -102,14 +104,12 @@ const PackageSection = ({ id, title, subtitle, packages, image, extras }: Packag
         </div>
 
         {image && (
-          <div className="mb-12 max-w-3xl mx-auto rounded-2xl overflow-hidden">
+          <div className={`mb-12 mx-auto rounded-2xl overflow-hidden ${imageWrapperClassName ?? "max-w-3xl"}`}>
             <img
               src={image}
               alt={title}
               loading="lazy"
-              width={1024}
-              height={640}
-              className="w-full h-48 md:h-64 object-cover"
+              className={imageClassName ?? "w-full h-48 md:h-64 object-cover"}
             />
           </div>
         )}
