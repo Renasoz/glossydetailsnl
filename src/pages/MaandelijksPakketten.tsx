@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import maandelijksImg from "@/assets/hero-car.jpg.asset.json";
+import maandelijksImg from "@/assets/maandelijks.jpg.asset.json";
 import { Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
