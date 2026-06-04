@@ -188,17 +188,6 @@ export const combiPakketten: Package[] = [
       },
     ],
   },
-  {
-    name: "Combi Totaal",
-    price: "vanaf €319",
-    description: "Jouw auto weer helemaal zo goed als nieuw, met stoomreiniging.",
-    features: [
-      "Alles uit Combi Premium",
-      "Leervoeding & bescherming",
-      "Stoomreiniging interieur",
-      "Ruitcoating & chroomwerk",
-    ],
-  },
 ];
 
 export interface ExtraOption {
