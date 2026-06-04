@@ -14,8 +14,6 @@ const CombiPakketten = () => (
         subtitle="Binnen & buiten compleet"
         packages={combiPakketten}
         image={combiImg.url}
-        imageWrapperClassName="max-w-sm bg-muted"
-        imageClassName="w-full h-[28rem] md:h-[32rem] object-contain"
       />
     </div>
     <Footer />
