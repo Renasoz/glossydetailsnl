@@ -15,7 +15,7 @@ const MaandelijksPakketten = () => (
           <img
             src={maandelijksImg.url}
             alt="Maandelijks onderhoud"
-            className="w-full max-w-lg mx-auto rounded-2xl mb-8 object-cover aspect-video"
+            className="w-full max-w-lg mx-auto rounded-2xl mb-8 object-contain aspect-square bg-muted"
           />
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
             Wij bieden maandelijks onderhoud volledig op maat. Geen vaste pakketten, maar een offerte die past bij uw auto en wensen.
