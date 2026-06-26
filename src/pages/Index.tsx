@@ -7,6 +7,7 @@ import maandelijksImg from "@/assets/maandelijks-velg.jpeg.asset.json";
 import interieurImg from "@/assets/interieur.jpg.asset.json";
 import exterieurImg from "@/assets/exterieur.jpg.asset.json";
 import combiImg from "@/assets/maandelijks-audi.jpg.asset.json";
+import showcaseImg from "@/assets/audi-rs3-showcase.jpg.asset.json";
 import { MapPin, Car, Sparkles, Phone, MessageCircle, ShieldCheck, Hand, Droplets, Clock } from "lucide-react";
 
 const services = [
@@ -141,6 +142,27 @@ const Index = () => (
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section className="py-20 px-4 border-t border-border">
+      <div className="container mx-auto max-w-3xl text-center">
+        <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-3">Ons Werk</p>
+        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Resultaat Dat Spreekt</h2>
+        <p className="text-muted-foreground text-lg mb-8">
+          Elke auto verdient de Glossy-detailsbehandeling — voor een finish die er in elk licht uitspringt.
+        </p>
+        <img
+          src={showcaseImg.url}
+          alt="Audi RS3 Sportback na een Glossy Details behandeling"
+          loading="lazy"
+          width={1024}
+          height={1280}
+          className="w-full rounded-2xl border border-border shadow-lg"
+        />
+        <p className="text-muted-foreground text-sm mt-4">
+          Audi RS3 Sportback — exterieur behandeling met handwas, velgreiniging en beschermende wax.
+        </p>
       </div>
     </section>
 
