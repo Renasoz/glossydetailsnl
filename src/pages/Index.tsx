@@ -7,6 +7,7 @@ import maandelijksImg from "@/assets/maandelijks-velg.jpeg.asset.json";
 import interieurImg from "@/assets/interieur.jpg.asset.json";
 import exterieurImg from "@/assets/exterieur.jpg.asset.json";
 import combiImg from "@/assets/maandelijks-audi.jpg.asset.json";
+import showcaseImg from "@/assets/audi-rs3-showcase.jpg.asset.json";
 import { MapPin, Car, Sparkles, Phone, MessageCircle, ShieldCheck, Hand, Droplets, Clock } from "lucide-react";
 
 const services = [
