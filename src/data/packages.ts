@@ -156,7 +156,8 @@ export const exterieurPakketten: Package[] = [
 export const combiPakketten: Package[] = [
   {
     name: "Combi Basis",
-    price: "vanaf €119",
+    price: "vanaf €90",
+    originalPrice: "€130",
     description: "Het beste van beide werelden. Interieur en exterieur netjes, opgefrist en beschermd.",
     features: [
       "Uitwendige handwas & snow foam",
@@ -168,7 +169,8 @@ export const combiPakketten: Package[] = [
   },
   {
     name: "Combi Premium",
-    price: "vanaf €249",
+    price: "vanaf €209",
+    originalPrice: "€249",
     popular: true,
     description: "Jouw auto van binnen en buiten weer showroom ready. Inclusief stoomreiniging, grondige vlekverwijdering, dieptereiniging van de vloer, kunststof voeding, motorruimte reinigen en kleibehandeling.",
     features: [
