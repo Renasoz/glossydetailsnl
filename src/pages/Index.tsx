@@ -30,7 +30,7 @@ const services = [
     description: "Binnen & buiten compleet verzorgd in één behandeling.",
     image: combiImg.url,
     href: "/combi",
-    startingPrice: "Vanaf €119",
+    startingPrice: "Vanaf €90",
   },
   {
     title: "Maandelijks Onderhoud",

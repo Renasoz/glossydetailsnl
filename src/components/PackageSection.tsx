@@ -39,28 +39,45 @@ const PackageCard = ({
 }: {
   pkg: Package;
   onSelect: (name: string, price: string, extras?: ExtraOption[]) => void;
-}) => (
-  <button
-    type="button"
-    onClick={() => onSelect(pkg.name, pkg.price, pkg.extras)}
-    className={`w-full flex items-center gap-4 p-5 rounded-2xl border text-left transition-all hover:shadow-lg hover:-translate-y-0.5 ${
-      pkg.popular
-        ? "border-primary bg-surface-elevated shadow-md shadow-primary/10"
-        : "border-border bg-card"
-    }`}
-  >
-    <div className="flex-1 min-w-0">
-      <h3 className="text-base font-serif font-bold text-foreground">{pkg.name}</h3>
-      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-        {pkg.description}
-      </p>
-    </div>
-    <div className="shrink-0 text-right pl-4 border-l border-border">
-      <span className="text-xl font-bold text-primary">{pkg.price.replace("vanaf ", "")}</span>
-      <p className="text-xs text-muted-foreground">Vanaf</p>
-    </div>
-  </button>
-);
+}) => {
+  const displayPrice = pkg.price.replace("vanaf ", "");
+  return (
+    <button
+      type="button"
+      onClick={() => onSelect(pkg.name, pkg.price, pkg.extras)}
+      className={`w-full flex items-center gap-4 p-5 rounded-2xl border text-left transition-all hover:shadow-lg hover:-translate-y-0.5 ${
+        pkg.popular
+          ? "border-primary bg-surface-elevated shadow-md shadow-primary/10"
+          : "border-border bg-card"
+      }`}
+    >
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-2 mb-1">
+          <h3 className="text-base font-serif font-bold text-foreground">{pkg.name}</h3>
+          {pkg.popular && (
+            <span className="text-xs font-semibold bg-primary text-primary-foreground px-2 py-0.5 rounded-full">
+              Populair
+            </span>
+          )}
+        </div>
+        <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+          {pkg.description}
+        </p>
+      </div>
+      <div className="shrink-0 text-right pl-4 border-l border-border">
+        {pkg.originalPrice ? (
+          <>
+            <span className="text-sm text-muted-foreground line-through block">{pkg.originalPrice}</span>
+            <span className="text-xl font-bold text-primary">{displayPrice}</span>
+          </>
+        ) : (
+          <span className="text-xl font-bold text-primary">{displayPrice}</span>
+        )}
+        <p className="text-xs text-muted-foreground">Vanaf</p>
+      </div>
+    </button>
+  );
+};
 
 const PackageSection = ({ id, title, subtitle, packages, image, extras, imageWrapperClassName, imageClassName }: PackageSectionProps) => {
   const location = useLocation();
