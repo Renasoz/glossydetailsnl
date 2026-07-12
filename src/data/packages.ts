@@ -1,6 +1,7 @@
 export interface Package {
   name: string;
   price: string;
+  originalPrice?: string;
   period?: string;
   description: string;
   features: string[];
