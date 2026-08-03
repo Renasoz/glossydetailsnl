@@ -18,7 +18,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/glossydetailsnl">
+    <BrowserRouter basename={import.meta.env.PROD ? "/glossydetailsnl" : "/"}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/maandelijks" element={<MaandelijksPakketten />} />
