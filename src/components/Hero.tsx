@@ -1,4 +1,4 @@
-import heroCar from "@/assets/combi.jpg.asset.json";
+import heroCar from "@/assets/IMG_1906.JPG.jpeg";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
