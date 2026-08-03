@@ -4,7 +4,7 @@ import ServiceCard from "@/components/ServiceCard";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import maandelijksImg from "@/assets/IMG_1908.JPG.jpeg";
-import interieurImg from "@/assets/IMG_1891.PNG";
+import interieurImg from "@/assets/IMG_1891.png";
 import exterieurImg from "@/assets/IMG_1215.JPG.jpeg";
 import combiImg from "@/assets/IMG_2692.JPG.jpeg";
 import showcaseImg from "@/assets/IMG_2693.JPG.jpeg";
