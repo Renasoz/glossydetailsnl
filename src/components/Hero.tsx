@@ -1,4 +1,4 @@
-import heroCar from "@/assets/IMG_1906.JPG.jpeg";
+import heroCar from "@/assets/combi.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Hero = () => (
   <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
     <img
-      src={heroCar}
+      src={heroCar.url}
       alt="Mobiele auto detailing bij u thuis"
       className="absolute inset-0 w-full h-full object-cover"
       width={1920}
